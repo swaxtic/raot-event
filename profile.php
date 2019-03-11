@@ -5,36 +5,42 @@ License: Creative Commons Attribution 3.0 Unported
 License URL: http://creativecommons.org/licenses/by/3.0/
 -->
 <!DOCTYPE HTML>
-<? 
+<?
 include "config.php";
 session_start();
 
-
 ?>
+
 <html>
-<?
+<head>
+<title>RAOT Event Finder | Home</title>
+<link href="css/bootstrap.css" rel='stylesheet' type='text/css' />
+<!-- jQuery (necessary JavaScript plugins) -->
+<script src="js/bootstrap.js"></script>
+<!-- Custom Theme files -->
+<link href="css/style.css" rel='stylesheet' type='text/css' />
+<!-- Custom Theme files -->
+<!--//theme-style-->
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="keywords" content="Jadwal Tournament, Tournament E-Sport, Jadwal E-Sport,Jadwal turnamen mobile legend, jadwal turnamen ml,jadwal turnamen pubg, jadwal turnamen pubgm" />
+<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+
+<script src="js/jquery.min.js"></script>
+
+</head>
+<body>
+<!-- header -->
+<?php
 include "ndas.php"
 ?>
-<!-- script-for-menu -->
-					<script>
-						 $( "span.menu" ).click(function() {
-						$( "ul.nav1" ).slideToggle( 300, function() {
-						// Animation complete.
-							});
-							});
-					</script>
-				<!-- /script-for-menu -->		 
-		 <div class="clearfix"></div>
-	 </div>
-</div>
 <!-- banner -->
 <div class="banner">		  			
 		<div class="bnr2">						  
 	   </div>			 
 </div>
 <!---->
-<?php if($_SESSION['status']!="login"){ ?>
-
+<?php if((isset($_SESSION['status']) && $_SESSION['status']!="login")){ ?>
 <div class="blog">
 		<div class="container">
 			<div class="col-md-8 blog-left" >
@@ -46,7 +52,7 @@ include "ndas.php"
 		</div>	
 </div>
 
-<?        
+<?php        
 }else{ ?>
 	   <div class="blog">
 		<div class="container">
@@ -70,7 +76,7 @@ include "ndas.php"
 						
 					 </div>
 				 </div>
-			    <?
+			    <?php
 				}
 		        }
 				?>	
@@ -81,7 +87,7 @@ include "ndas.php"
 			</div>	
 			<div class="col-md-4 single-page-right">
 				<div class="category blog-ctgry">
-					<h4>Welcome <?php echo $_SESSION['nick']; ?>..!!</h4>
+					<h4>Welcome <?php echo isset($_SESSION['nick']); ?>..!!</h4>
 					<div class="list-group">
 						<a href="addevents.php" class="list-group-item">Add Events</a>
 						<a href="events.php" class="list-group-item">Find Tournaments</a>
@@ -94,7 +100,7 @@ include "ndas.php"
 		</div>	
 </div>
 	                        
-<?
+<?php
 }
 ?>
 	

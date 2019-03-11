@@ -5,37 +5,40 @@ License: Creative Commons Attribution 3.0 Unported
 License URL: http://creativecommons.org/licenses/by/3.0/
 -->
 <!DOCTYPE HTML>
-<? 
-include "config.php";
+<?php 
 session_start();
 
 ?>
 <html>
 <head>
 <title>RAOT Event Finder | Tambah Tournament</title>
-<?
+<link href="css/bootstrap.css" rel='stylesheet' type='text/css' />
+<!-- jQuery (necessary JavaScript plugins) -->
+<script src="js/bootstrap.js"></script>
+<!-- Custom Theme files -->
+<link href="css/style.css" rel='stylesheet' type='text/css' />
+<!-- Custom Theme files -->
+<!--//theme-style-->
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="keywords" content="Jadwal Tournament, Tournament E-Sport, Jadwal E-Sport,Jadwal turnamen mobile legend, jadwal turnamen ml,jadwal turnamen pubg, jadwal turnamen pubgm" />
+<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+
+<script src="js/jquery.min.js"></script>
+
+</head>
+<body>
+<!-- header -->
+<?php
 include "ndas.php"
 ?>
-<script type="text/javascript" src="ckeditor/ckeditor.js"></script>
-<!-- script-for-menu -->
-					<script>
-						 $( "span.menu" ).click(function() {
-						$( "ul.nav1" ).slideToggle( 300, function() {
-						// Animation complete.
-							});
-							});
-					</script>
-				<!-- /script-for-menu -->		 
-		 <div class="clearfix"></div>
-	 </div>
-</div>
 <!-- banner -->
 <div class="banner">		  			
 		<div class="bnr2">						  
 	   </div>			 
 </div>
 <!--pages-starts-->
-<?php if($_SESSION['status']=="login"){ ?>
+<?php if((isset($_SESSION['status']) && $_SESSION['status']!="login")){ ?>
 <div class="pages">
 		<div class="contact">
 	    <div class="container">
@@ -68,9 +71,9 @@ include "ndas.php"
 				 </div>
 				 <div class="col-md-6 contact-right">
 				        <h4>Deskripsi</h4>
-						 <textarea class="ckeditor" name="deskripsi" placeholder="Deskripsikan Event Sedetail mungkin.." required=""/></textarea>
+						 <textarea class="ckeditor" name="deskripsi" placeholder="Deskripsikan Event Sedetail mungkin.." required/></textarea>
 						 <h4>Rules</h4>
-						 <textarea class="ckeditor" name="rules" placeholder="Masukkan Peraturan, Mis: jumlah peserta,dll" required=""/></textarea>
+						 <textarea class="ckeditor" name="rules" placeholder="Masukkan Peraturan, Mis: jumlah peserta,dll" required/></textarea>
 					Gambar Event (Poster,dsb)<input type="file" name="gambarEvent" id="gambarEvent"><br>
 					<input type="submit" name="submitEv" value="SUBMIT"/>
 				 </div>
@@ -83,7 +86,7 @@ include "ndas.php"
 	    </div>
 	    </div>
 	</div>
-<?
+<?php
 }
 else { ?>
 <div class="pages">
@@ -146,7 +149,7 @@ else { ?>
 	    </div>
 	</div>		
 
-<?
+<?php
 }
 ?>
 <!----pages-end---->

@@ -34,7 +34,7 @@ function countdown() {
 }
 setInterval(function(){ countdown(); },1000);
 </script>
-        <?
+        <?php
         }else {
             echo "Error: " . $simp . "<br>" . mysqli_error($konak);
         }

@@ -21,12 +21,11 @@ if(isset($_POST['submitEv'])) {
     $mode		=	$_POST['mode'];
     $desk		=	$_POST['deskripsi'];
     $rules		=	$_POST['rules'];
-    $id_panitia =   $_SESSION['id_panitia'];
+    $id_panitia =   $_SESSION['id_panitia']; //ambil session untuk mengisi uplink
     
 /******************************************************************************
- * Init some variables with values from $_POST so we don't have to keep typing*
- * the full array list name whenever we want to use the values.               *
- * ****************************************************************************/
+ * Swaxtic Here*
+ *****************************************************************************/
 if($fileName != ""){
     $rando = rand(1,10000);
     $nfile = $rando."-".$fileName;

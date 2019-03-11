@@ -1,9 +1,4 @@
-﻿# Host: localhost  (Version 5.5.5-10.1.37-MariaDB)
-# Date: 2019-03-07 20:32:03
-# Generator: MySQL-Front 6.1  (Build 1.26)
-
-
-#
+﻿#
 # Structure for table "event"
 #
 

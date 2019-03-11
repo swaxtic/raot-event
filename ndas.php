@@ -1,4 +1,7 @@
-<div class="top-banner">
+<?php
+include "config.php";
+?>
+ <div class="top-banner">
 	 <div class="header">
 		 <div class="container">
 			 <div class="headr-left">
@@ -42,14 +45,13 @@
 						 <li><a href="events.php">Events</a></li>
 		                 <li><a href="addevents.php">Add Events</a></li>
 						 <li><a href="contact.php">Mail</a></li>
-	                           <?php if($_SESSION['status']!="login"){ ?>
+	                           <?php if((isset($_SESSION['status']) && $_SESSION['status']!="login")){ ?>
 	                                <li><h3><a href="login.php"><span class="label label-primary">LOGIN</span></a> </h3></li>
 	                        <?php        
 	                        }else{
-	                        $idipan = $_SESSION['id_panitia'];
+	                        $idipan = isset($_SESSION['id_panitia']);
 				            $sql = "select * from panitia WHERE id_panitia ='$idipan'";
-				            $que = mysqli_query($konak,$sql);
-				    
+				            $que = mysqli_query($konak,$sql);		    
 				            $res=mysqli_fetch_array($que);
 	                        ?>
 	                                <li><h3><a href="profile.php?id=<?php echo $res['id_panitia']; ?>"><span class="label label-primary">PROFILE</span></a> </h3></li>
