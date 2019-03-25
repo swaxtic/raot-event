@@ -144,7 +144,7 @@ else { ?>
   </div>
 </div>
 
-<div class="Buttons"><center><h1><a href="#"><span class="label label-info">Sign Up, Its Free</span></a></h1></center></div>
+<div class="Buttons"><center><h1><a href="register.php"><span class="label label-info">Sign Up, Its Free</span></a></h1></center></div>
 <div class="clearfix"> </div>
 	    </div>
 	</div>		

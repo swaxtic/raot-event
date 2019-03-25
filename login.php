@@ -34,7 +34,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 		</div>
 		
 		<div class="footer">
-		<p>© 2018 RAOT-HUB Login. All Rights Reserved | Design by  <a href="https://w3layouts.com/" >  w3layouts </a></p>
+		<p>© 2018 RAOT-HUB Login. All Rights Reserved</p>
 		</div>
 	</div>
 </body>

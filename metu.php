@@ -1,6 +1,6 @@
 <?php
 session_start();
-unset($_SESSION['status']);
+session_destroy();
 // mengalihkan halaman sambil mengirim pesan logout
 header("location:index.php?logoutsukses");
 ?>

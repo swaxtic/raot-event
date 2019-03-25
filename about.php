@@ -97,9 +97,9 @@ include "ndas.php"
 			  </div>      
 			  <div class="grid_4">				 
 					  <div class="team-grid">
-						   <img src="images/aa4.jpg" alt="" width='900px' height='370px'>
-						   <h4>M.Teguh Setiawan</h4>
-						  <p>Pemain Mobile Legend paling pro. </p>
+						   <img src="images/" alt="" width='900px' height='370px'>
+						   <h4>Sandy Dwi Handoko</h4>
+						  <p>-- </p>
 					  </div>					  
 			 </div>
 			 <div class="clearfix"></div> 

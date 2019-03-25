@@ -23,8 +23,8 @@ include "config.php";
 			 <div class="headr-right">
 				 <div class="details">
 					 <ul>
-						  <li><a href="mailto@example.com"><span class="glyphicon glyphicon-envelope" aria-hidden="true"></span>sinatras.ows@.com</a></li>
-						 <li><span class="glyphicon glyphicon-earphone" aria-hidden="true"></span>087833555466</li>
+						  <li><a href="mailto@example.com"><span class="glyphicon glyphicon-envelope" aria-hidden="true"></span>raotevent@.gmail.com</a></li>
+						 <li><span class="glyphicon glyphicon-earphone" aria-hidden="true"></span>08xxxxxxxxx</li>
 					 </ul>
 				 </div>
 			 </div>
