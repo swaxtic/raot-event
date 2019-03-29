@@ -5,8 +5,7 @@ License: Creative Commons Attribution 3.0 Unported
 License URL: http://creativecommons.org/licenses/by/3.0/
 -->
 <!DOCTYPE HTML>
-<? 
-include "config.php";
+<?php 
 session_start();
 
 ?>
@@ -30,8 +29,9 @@ session_start();
 </head>
 <body>
 <!-- header -->
-<?php
-include "ndas.php"
+<?php 
+include "ndas.php";
+
 ?>
 <!-- banner -->
 <div class="banner">		  			

@@ -27,7 +27,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 				<form action="loginin.php" method="post">
 					<input type="text" name="email" placeholder="Email..." required=""/>
 					<input type="password"  name="password" class="padding" placeholder="Password" required=""/>
-					<a href="register.php"> Register? </a><input type="submit" value="LOGIN">
+					<a href="register.php"> Register? </a><input type="submit" name="submit" value="LOGIN">
 				</form>
 			</div>
 		  <div class="clear"> </div>
