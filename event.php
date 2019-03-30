@@ -62,7 +62,10 @@ include "ndas.php";
 		 	                </div>
 						<div class="blog-img">
 							<figure>
-	    	<img class="w-100 rounded" src="assetsz/gambir/<?php echo $res['foto']; ?>" alt="<?php echo $res['nm_event']; ?>"/>
+<link rel="stylesheet" type="text/css" href="css/Fancybox/dist/jquery.fancybox.min.css">
+    	<a href="assetsz/gambir/<?php echo $res['foto']; ?>" data-fancybox data-caption="Caption for single image">
+	    	<img class="w-100 rounded" src="assetsz/gambir/<?php echo $res['foto']; ?>" alt="<?php echo $res['nm_event']; ?>" width='680px' height='316px'/>
+		</a>
 	                </figure>
 						</div>						
 						<p class="snglp">
@@ -184,6 +187,7 @@ include "ndas.php";
 <!---->
  
 
-
+<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+	<script src="css/Fancybox/dist/jquery.fancybox.min.js"></script>
 </body>
 </html>

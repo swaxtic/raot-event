@@ -5,8 +5,7 @@ License: Creative Commons Attribution 3.0 Unported
 License URL: http://creativecommons.org/licenses/by/3.0/
 -->
 <!DOCTYPE HTML>
-<?
-include "config.php";
+<?php
 session_start();
 
 ?>
@@ -40,7 +39,7 @@ include "ndas.php"
 	   </div>			 
 </div>
 <!---->
-<?php if((isset($_SESSION['status']) && $_SESSION['status']!="login")){ ?>
+<?php if(!isset($_SESSION['status'])){ ?>
 <div class="blog">
 		<div class="container">
 			<div class="col-md-8 blog-left" >
@@ -87,7 +86,7 @@ include "ndas.php"
 			</div>	
 			<div class="col-md-4 single-page-right">
 				<div class="category blog-ctgry">
-					<h4>Welcome <?php echo isset($_SESSION['nick']); ?>..!!</h4>
+					<h4>Welcome <?php echo $_SESSION['nick']; ?>..!!</h4>
 					<div class="list-group">
 						<a href="addevents.php" class="list-group-item">Add Events</a>
 						<a href="events.php" class="list-group-item">Find Tournaments</a>
