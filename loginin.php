@@ -22,7 +22,7 @@ if($cek > 0){
     $_SESSION['nick'] = $r['nick'];
 	$_SESSION['email'] = $r['email'];
 	$_SESSION['status'] = "login";
-	header("location:index.php");
+	header("location:panitia/index.php");
 }else{
 	header("location:index.php?pesan=gagal");
 }	

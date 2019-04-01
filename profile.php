@@ -33,11 +33,6 @@ session_start();
 <?php
 include "ndas.php"
 ?>
-<!-- banner -->
-<div class="banner">		  			
-		<div class="bnr2">						  
-	   </div>			 
-</div>
 <!---->
 <?php if(!isset($_SESSION['status'])){ ?>
 <div class="blog">

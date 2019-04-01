@@ -32,11 +32,6 @@ session_start();
 <?php
 include "ndas.php"
 ?>
-<!-- banner -->
-<div class="banner">		  			
-		<div class="bnr2">						  
-	   </div>			 
-</div>
 <!--pages-starts-->
 <?php if(!isset($_SESSION['status'])){ ?>
 <div class="pages">

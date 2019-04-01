@@ -48,7 +48,7 @@ a#toTop{
 }
 /*-- header_top --*/
 .header{
-	background:#69d2e8;
+	background:#0791d0;
 	padding:1em 0;
 }
 .headr-left{
@@ -172,17 +172,17 @@ color:#fff !important;
 }
 /*--- slider-css --*/
 .banner1{
-	background:url(../images/bnr3.jpg) no-repeat 0px 0px;
+	background:url(../images/banner/pa.jpg) no-repeat 0px 0px;
 	background-size:cover;
 	min-height:680px;
 }
 .banner2{
-	background:url(../images/bnr2.jpg) no-repeat 0px 0px;
+	background:url(../images/banner/apex.jpg) no-repeat 0px 0px;
 	background-size:cover;
 	min-height:680px;
 }
 .banner3{
-	background:url(../images/bnr3.jpg) no-repeat 0px 0px;
+	background:url(../images/banner/pubg.jpg) no-repeat 0px 0px;
 	background-size:cover;
 	min-height:680px;
 }
@@ -537,7 +537,7 @@ ul.callbacks_tabs.callbacks1_tabs {
 	font-size:0.9em;
 }
 .bnr2 {
-  background: url(../images/bnr3.jpg) no-repeat 0px 0px;
+  background:#333;
   background-size: cover;
   min-height:170px;
 }
@@ -2572,3 +2572,38 @@ ul.callbacks_tabs.callbacks1_tabs {
 .blog-info p {
   margin-top: 0.5em;
 }
+/* Style the tab */
+.tab {
+  overflow: hidden;
+  border: 1px solid #ccc;
+  background-color: #f1f1f1;
+}
+
+/* Style the buttons that are used to open the tab content */
+.tab button {
+  background-color: inherit;
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 14px 16px;
+  transition: 0.3s;
+}
+
+/* Change background color of buttons on hover */
+.tab button:hover {
+  background-color: #ddd;
+}
+
+/* Create an active/current tablink class */
+.tab button.active {
+  background-color: #ccc;
+}
+
+/* Style the tab content */
+.tabcontent {
+  display: none;
+  padding: 6px 12px;
+  border: 1px solid #ccc;
+  border-top: none;
+} 

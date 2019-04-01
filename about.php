@@ -33,19 +33,14 @@ session_start();
 include "ndas.php";
 
 ?>
-<!-- banner -->
-<div class="banner">		  			
-		<div class="bnr2">						  
-	   </div>			 
-</div>
 <!-- About -->
 <div class="about">
 	 <div class="container">
 		 <h2>About</h2>
 		 <div class="about-info-grids">
-			 <div class="col-md-5 abt-pic">
+			 <!--<div class="col-md-5 abt-pic">
 				 <img src="images/5_Dota2-Riki.jpg" class="img-responsive" alt=""/>
-			 </div>
+			 </div>-->
 			 <div class="col-md-7 abt-info-pic">
 				 <h3><strong>RAOT Your Tournament Partner</strong></h3>
 				 <p>    Esport atau disebut juga electronic sport (olahraga elektronik)  adalah  olahraga yang

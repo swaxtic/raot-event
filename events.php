@@ -32,11 +32,6 @@ session_start();
 <?php
 include "ndas.php"
 ?>
-<!-- banner -->
-<div class="banner">		  			
-		<div class="bnr2">						  
-	   </div>			 
-</div>
 <!-- content -->
 <div class="review">
 	 <div class="container">

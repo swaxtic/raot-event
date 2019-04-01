@@ -33,41 +33,60 @@ session_start();
 include "ndas.php";
 
 ?>
-<!-- banner -->
-<div class="banner">		  			
-		<div class="bnr2">						  
-	   </div>			 
-</div>
 <!---->
 <div class="blog">
 		<div class="container">
 		   <?php
 		   $id =$_GET['detail'];
 		   if(isset($_GET['detail'])){
-		       $sql     ="select * from event where idEvent='$id'";
+		       $sql     ="select * from event natural join panitia where idEvent='$id' AND uplink=id_panitia";
 		       $que     = mysqli_query($konak,$sql);
 		      
 		       while ($res=mysqli_fetch_array($que)){
 		        
-		       //$upl            = "select uplink from event where idEvent='$id'";
-		       //$kueriuplink    = mysqli_query($konak,$upl);
-		       //$sql2           = "select nick from panitia where id_panitia='$kueriuplink' ";
-		       //$kuerinick      = mysqli_query($konak,$sql2);
+		       
 		   ?>
 			<div class="col-md-8 blog-left" >
 				<div class="blog-info">
+					<div class="sub-trailer">
+					    <div class="clearfix"> </div>
+				   </div>
 					<div class="blog-info-text">
-			            <div class="team">
-			                <h3><?php echo $res['nm_event']; ?></h3>	  
+			            <div class="col-md-7 abt-info-pic">
+			                <h3><strong><?php echo $res['nm_event']; ?></strong></h3> By <?php echo $res['nick']; ?></a></br>
+					</br> 
 		 	                </div>
 						<div class="blog-img">
-							<figure>
-<link rel="stylesheet" type="text/css" href="css/Fancybox/dist/jquery.fancybox.min.css">
+						<figure>
+		<link rel="stylesheet" type="text/css" href="css/Fancybox/dist/jquery.fancybox.min.css">
     	<a href="assetsz/gambir/<?php echo $res['foto']; ?>" data-fancybox data-caption="Caption for single image">
 	    	<img class="w-100 rounded" src="assetsz/gambir/<?php echo $res['foto']; ?>" alt="<?php echo $res['nm_event']; ?>" width='680px' height='316px'/>
 		</a>
-	                </figure>
-						</div>						
+	                	</figure>
+						</div>
+					</br>
+					 <!-- Tab links -->
+						<div class="nav nav-tabs">
+						  <button class="tablinks" onclick="openCity(event, 'London')">Overview</button>
+						  <button class="tablinks" onclick="openCity(event, 'Paris')">Participants</button>
+						  <button class="tablinks" onclick="openCity(event, 'Tokyo')">Bracket</button>
+						</div>
+
+						<!-- Tab content -->
+						<div id="London" class="tabcontent">
+						  <h3>-</h3>
+						  <p>-</p>
+						</div>
+
+						<div id="Paris" class="tabcontent">
+						  <h3>-</h3>
+						  <p>-</p>
+						</div>
+
+						<div id="Tokyo" class="tabcontent">
+						  <h3>-</h3>
+						  <p>-</p>
+						</div> 		
 						<p class="snglp">
 						<b>Description</b>
                         <p><?php echo $res['deskripsi']; ?></p>
@@ -189,5 +208,33 @@ include "ndas.php";
 
 <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
 	<script src="css/Fancybox/dist/jquery.fancybox.min.js"></script>
+	
+	<script type="text/javascript">
+		
+		
+	function openCity(evt, cityName) {
+	  // Declare all variables
+	  var i, tabcontent, tablinks;
+
+	  // Get all elements with class="tabcontent" and hide them
+	  tabcontent = document.getElementsByClassName("tabcontent");
+	  for (i = 0; i < tabcontent.length; i++) {
+		tabcontent[i].style.display = "none";
+	  }
+
+	  // Get all elements with class="tablinks" and remove the class "active"
+	  tablinks = document.getElementsByClassName("tablinks");
+	  for (i = 0; i < tablinks.length; i++) {
+		tablinks[i].className = tablinks[i].className.replace(" active", "");
+	  }
+
+	  // Show the current tab, and add an "active" class to the button that opened the tab
+	  document.getElementById(cityName).style.display = "block";
+	  evt.currentTarget.className += " active";
+	} 
+
+	</script>
+	
 </body>
+
 </html>

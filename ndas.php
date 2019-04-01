@@ -12,12 +12,12 @@ include "config.php";
 						<a href="https://www.instagram.com/raot.id/"><i class="pin"></i></a>	
 						<a href="#"></a>	
 				 </div>
-				 <div class="search">
+				 <!--<div class="search">
 					 <form>
 						 <input type="submit" value="">
 						 <input type="text" value="" placeholder="Search...">					 
 					 </form>
-				 </div>
+				 </div>-->
 				 <div class="clearfix"></div>
 			 </div>
 			 <div class="headr-right">
@@ -75,4 +75,9 @@ include "config.php";
 		 </div>
 	 </div>
 	 
+</div>
+<!-- banner -->
+<div class="banner">		  			
+		<div class="bnr2">						  
+	   </div>			 
 </div>
