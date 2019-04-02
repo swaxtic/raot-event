@@ -128,7 +128,8 @@ include "config.php";
 				
 					<div class="slid banner1">
 						  <div class="caption">
-								<h3>Dari Gamer Untuk Gamer</p>
+								<h3>RAOT EVENT - Your eSport Partner</h3>
+								<p>Easy to manage, easy to share, and find your tournament events</p>
 						  </div>
 					</div>
 				

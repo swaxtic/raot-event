@@ -12,12 +12,6 @@ include "config.php";
 						<a href="https://www.instagram.com/raot.id/"><i class="pin"></i></a>	
 						<a href="#"></a>	
 				 </div>
-				 <!--<div class="search">
-					 <form>
-						 <input type="submit" value="">
-						 <input type="text" value="" placeholder="Search...">					 
-					 </form>
-				 </div>-->
 				 <div class="clearfix"></div>
 			 </div>
 			 <div class="headr-right">
@@ -40,7 +34,7 @@ include "config.php";
 			 <div class="top-menu">
 				 <span class="menu"></span>
 					<ul class="nav1">
-						 <li class="active"><a href="index.php">Home</a></li>
+						 <li><a href="index.php">Home</a></li>
 						 <li><a href="about.php">About</a></li>
 						 <li><a href="events.php">Events</a></li>
 		                 <li><a href="addevents.php">Add Events</a></li>

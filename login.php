@@ -31,6 +31,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 					<br>
 					<br> <a href="register.php"> Register ?</a>
 					<a href="lupa_password.php"> Lupa Password ?</a>
+					<br> <a href="register.php"> Don't have a RAOT Account? Register now  </a> <br>
 				</form>
 			</div>
 		  <div class="clear"> </div>
