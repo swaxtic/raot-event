@@ -36,12 +36,12 @@ background-attachment: fixed;
 }
 
 @font-face{
-font-family: "Audiowide-Regular";
-src:url(../fonts-login/Audiowide-Regular.ttf);
+font-family: "Play-Regular";
+src:url(../fonts/Play-Regular.ttf);
 }
 @font-face{
-font-family: "Asap-Regular";
-src:url(../fonts-login/Asap-Regular.ttf);
+font-family: "Play-Regular";
+src:url(../fonts/Play-Regular.ttf);
 }
 .padding-all{
 padding:100px;
@@ -56,12 +56,12 @@ width:7%;
 }
 
 p ,a{
-font-family: "Asap-Regular";
+font-family: "Play-Regular";
 }
 .header h1 {
 font-size:50px;
 color: #fff;
-font-family: "Audiowide-Regular";
+font-family: "Play-Regular";
 letter-spacing:3px;
 margin:0 auto;
 }
@@ -93,7 +93,7 @@ background:transparent;
 border:0px;
 border-bottom: 1px solid #fff;
 border-radius: 0px;
-font-family: "Asap-Regular";
+font-family: "Play-Regular";
 letter-spacing:1.6px;
 color:#fff;
 }
@@ -103,19 +103,19 @@ color:#fff;
 }
 .mail-form-agile input[type="submit"]{
 font-size: 18px;
-padding: 10px 20px;
+padding: 10px 50px;
 letter-spacing:1.2px;
 border: none;
 text-transform: capitalize;
 outline: none;
-border-radius: 4px;
--webkit-border-radius: 4px;
--moz-border-radius: 4px;
+border-radius: 10px;
+-webkit-border-radius: 10px;
+-moz-border-radius: 10px;
 background: #D65B88;
 color: #fff;
 cursor: pointer;
 margin: 0 auto;
-font-family: "Asap-Regular";
+font-family: "Play-Regular";
 -webkit-transition-duration: 0.9s;
 transition-duration: 0.9s;
 }

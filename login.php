@@ -8,7 +8,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 <html>
 
 <head>
-<title>RAOT-HUB Login Page</title>
+<title>RAOT-HUB Login Page </title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta name="keywords" content="Gaming Login Form Widget Tab Form,Login Forms,Sign up Forms,Registration Forms,News letter Forms,Elements"/>
@@ -19,7 +19,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 <body>
 	<div class="padding-all">
 		<div class="header">
-			<h1>Raot-HUB Login</h1>
+			<h1>Raot-HUB Login </h1>
 		</div>
 
 		<div class="design-w3l">
@@ -27,14 +27,16 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 				<form action="loginin.php" method="post">
 					<input type="text" name="email" placeholder="Email..." required=""/>
 					<input type="password"  name="password" class="padding" placeholder="Password" required=""/>
-					<a href="register.php"> Register? </a><input type="submit" name="submit" value="LOGIN">
+					<input type="submit" name="submit" value="LOGIN">
+					<br>
+					<br> <a href="register.php"> Register ? </a> <br>
 				</form>
 			</div>
 		  <div class="clear"> </div>
 		</div>
 		
 		<div class="footer">
-		<p>© 2018 RAOT-HUB Login. All Rights Reserved</p>
+		<p>© 2019 RAOT-HUB Login. All Rights Reserved</p>
 		</div>
 	</div>
 </body>
