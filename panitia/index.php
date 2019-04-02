@@ -1,7 +1,12 @@
 ﻿<!DOCTYPE html>
 <?php
-session_start();
-include 'config.php'
+    session_start();
+    include 'config.php';
+
+    if(!isset($_SESSION['status'])){
+        header("location:../login.php");
+    }else{
+        
 ?>
 
 <html lang="en">
@@ -100,3 +105,6 @@ include 'config.php'
         <script src="scripts/common.js" type="text/javascript"></script>
       
     </body>
+    <?php
+    }
+?>
