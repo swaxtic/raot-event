@@ -11,6 +11,12 @@ session_start();
 ?>
 <html>
 <head>
+<style type="text/css">
+   .left    { text-align: left;}
+   .right   { text-align: right;}
+   .center  { text-align: center;}
+   .justify { text-align: justify;}
+</style>
 <title>RAOT Event Finder | About</title>
 <link href="css/bootstrap.css" rel='stylesheet' type='text/css' />
 <!-- jQuery (necessary JavaScript plugins) -->
@@ -43,18 +49,18 @@ include "ndas.php";
 			 </div>-->
 			 <div class="col-md-7 abt-info-pic">
 				 <h3><strong>RAOT Your Tournament Partner</strong></h3>
-				 <p>    Esport atau disebut juga electronic sport (olahraga elektronik)  adalah  olahraga yang
+				 <p class="justify">&nbsp &nbsp 	Esport atau disebut juga electronic sport (olahraga elektronik)  adalah  olahraga yang
 				 menggunakan game sebagai bidang kompotitif utama yang dimainkan oleh seorang profesional gamer.
 				 Beberapa waktu lalu, Esport sama sekali tidak dikenal. Akan teteapi, 
 				 sekarang ini fenonema esport terus berkembang dan memulai memancing perhatian dari 
 				 berbagai kalangan, Mulai dari gamer, media,hingga perusahan-perusahan besar yang sama sekali 
 				 tidak bergerak dibidang esport. Contoh dari permainan itu adalah CS GO , Leagoe of legend , DOTA 2 , Mobile Legend dan sebagainya.</p>
-				 <p>    Kini dunia E-Sports sudah berkembang dengan sangat pesat dan seluruh 
+				 <p class="justify">&nbsp &nbsp 	Kini dunia E-Sports sudah berkembang dengan sangat pesat dan seluruh 
 				 dunia merasakan dampak dari ajang E-Sports yang terus menerus semakin besar dan 
 				 bertambah baik cabang dan juga para pesertanya. Bahkan kini E-Sports akan dipertandingkan dalam Asian
 				 Games 2022 sehingga memungkiinkan E-Sports untuk masuk ke ajang yang lebih besar lagi yaitu ajang Olimpiade
 				 sebagai salah satu cabang olah raga.</p>
-				 <p>Raot  adalah portal informasi esports Indonesia. Kami menghubungkan penggemar game Indonesia dengan dunia esports yang mereka sukai,
+				 <p class="justify">&nbsp &nbsp 	Raot adalah portal informasi esports Indonesia. Kami menghubungkan penggemar game Indonesia dengan dunia esports yang mereka sukai,
 				 baik lokal maupun internasional, melalui konten yang disajikan secara mendalam dan komprehensif.
 				 Berdasarkan latar belakang tersebut maka dari itu, kami sebagai Developer ingin mempermudah
 				 penyelengara event esport dalam mengiklankan acara event esport yang akan diselenggarakan .

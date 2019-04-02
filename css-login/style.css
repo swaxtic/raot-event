@@ -30,14 +30,14 @@ img{max-width:100%;}
 /****-----start-body----****/
 body{
 text-align: center;
-background: url("../images-login/1.jpg") 0px 0px no-repeat;
+background: url("../images-login/log3.jpg") 0px 0px no-repeat;
 background-size:cover;
 background-attachment: fixed;
 }
 
 @font-face{
-font-family: "Play-Regular";
-src:url(../fonts/Play-Regular.ttf);
+font-family: "Play-Bold";
+src:url(../fonts/Play-Bold.ttf);
 }
 @font-face{
 font-family: "Play-Regular";
@@ -57,11 +57,12 @@ width:7%;
 
 p ,a{
 font-family: "Play-Regular";
+color: #fff
 }
 .header h1 {
 font-size:50px;
 color: #fff;
-font-family: "Play-Regular";
+font-family: "Play-Bold";
 letter-spacing:3px;
 margin:0 auto;
 }

@@ -172,12 +172,12 @@ color:#fff !important;
 }
 /*--- slider-css --*/
 .banner1{
-	background:url(../images/banner/pa.jpg) no-repeat 0px 0px;
+	background:url(../images/banner/apex.jpg) no-repeat 0px 0px;
 	background-size:cover;
 	min-height:680px;
 }
 .banner2{
-	background:url(../images/banner/apex.jpg) no-repeat 0px 0px;
+	background:url(../images/banner/pa.jpg) no-repeat 0px 0px;
 	background-size:cover;
 	min-height:680px;
 }
@@ -537,7 +537,7 @@ ul.callbacks_tabs.callbacks1_tabs {
 	font-size:0.9em;
 }
 .bnr2 {
-  background:#333;
+  background:url(../images/banner/apex.jpg) no-repeat 0px 0px;
   background-size: cover;
   min-height:170px;
 }
