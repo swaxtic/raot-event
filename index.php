@@ -295,7 +295,7 @@ include "config.php";
 <div class="footer">
 	 <div class="container">
 		 <div class="footer-grids">
-			 <div class="col-md-3 ftr-info">
+			 <!--<div class="col-md-3 ftr-info">
 				 <h3>About Us</h3>
 				 <p>RAOT-even Temukan event tournament game anda disini sesuai genre yang anda minati.</p>
 			 </div>
@@ -326,15 +326,20 @@ include "config.php";
 				 </ul>				 
 			 </div>		
 			 <div class="clearfix"></div>
-		 </div>
+		 </div>-->
+		 	<div style="text-align: center;">
+ 				
+			 <!..gambar>
+
+			</div>
+		 
 	 </div>
 </div>
-<!---->
+
 <div class="copywrite">
 	 <div class="container">
-		 <p> © 2019 RAOT-event Dev. All rights reserved | Design by <a href="http://w3layouts.com/">W3layouts</a></p>
+		 <p> © 2019 RAOT-event Dev. All rights reserved</p>
 	 </div>
 </div>
-<!---->
 </body>
 </html>
