@@ -330,6 +330,7 @@ include "config.php";
 		 	<div style="text-align: center;">
  				
 			 <!..gambar>
+			 <img src="images/RAOT-Circlezz.png"/>
 
 			</div>
 		 
@@ -341,5 +342,11 @@ include "config.php";
 		 <p> © 2019 RAOT-event Dev. All rights reserved</p>
 	 </div>
 </div>
+
+<!--<div class="bottom">
+	 <div class="bots">
+	 	 <p> Bottom </p>
+	 </div>
+</div>-->
 </body>
 </html>

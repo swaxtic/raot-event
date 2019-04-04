@@ -277,6 +277,10 @@ ul.callbacks_tabs.callbacks1_tabs {
 	position: relative;
 	max-width: 100%;
 }
+/* header .nbs-flexisel-bots{
+  position: relative;
+  max-width: 100%;
+} */
 .nbs-flexisel-ul {
 	position: relative;
 	width: 9999px;
@@ -510,7 +514,7 @@ ul.callbacks_tabs.callbacks1_tabs {
 	background:url(../images/pst1.jpg) no-repeat 0px 0px;
 	background-size:cover;
 	min-height:450px;
-	position:relative;
+	position: relative;
 }
 .poster-info{	
 	width:60%;
@@ -578,6 +582,10 @@ ul.callbacks_tabs.callbacks1_tabs {
 .copywrite {
 	padding:2em 0;
 	background:#333;
+}
+.bottom {
+  padding:2em;
+  background: #09C3EA;
 }
 .copywrite p {
   color: #FFF;
