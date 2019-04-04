@@ -1,6 +1,5 @@
 <?php 
-	session_start();
-	include 'config.php';
+	include "config.php";
 
 	if(isset($_POST['submit'])){
 		$email = $_POST['email'];
@@ -10,6 +9,7 @@
 		$cek = mysqli_num_rows($login);
 
 		if($cek > 0){
+			session_start();
 			$r = mysqli_fetch_assoc($login);
 			$_SESSION['id_panitia'] = $r['id_panitia'];
 			$_SESSION['email'] = $r['email'];

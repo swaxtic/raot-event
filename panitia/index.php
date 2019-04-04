@@ -71,16 +71,16 @@
 				    					$que 	= mysqli_query($konak,$sql);				    
 				    					while($res=mysqli_fetch_array($que)){
 										?>
-                                       <a href="event.php?detail=<?php echo $res['idEvent']; ?>" class="btn-box big span4"><i class=""></i><b>-</b>
+                                       <a href="event.php?detail=<?php echo $res['idEvent']; ?>" class="btn-box big span4"><i class=""></i><b><?php echo $res['nm_event']; ?></b>
                                         <p class="text-muted">
-                                            <?php echo $res['nm_event']; ?></p>
+                                            -</p>
                                     </a>
+                                    <?php
+				                    }
+		                            }
+				                    ?>
                                 </div>                  
                             </div>
-                <?php
-				}
-		        }
-				?>
                             <!--/#btn-controls-->
                         </div>
                         <!--/.content-->
