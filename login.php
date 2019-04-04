@@ -24,13 +24,18 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 
 		<div class="design-w3l">
 			<div class="mail-form-agile">
+				<div style="text-align: center;">
+		 			<img src="images/logo-bottom.png"/><br><br>
+				</div>
 				<form action="loginin.php" method="post">
 					<input type="text" name="email" placeholder="Email..." required=""/>
 					<input type="password"  name="password" class="padding" placeholder="Password" required=""/>
 					<input type="submit" name="submit" value="LOGIN">
 					<br>
 					<a href="lupa_password.php"> Lupa Password ?</a>
-					<br> <a href="register.php"> Don't have a RAOT Account? Register now  </a> <br>
+					<div style="text-align: center;">
+						<br> <a href="register.php"> Tidak Mempunyai Akun RAOT? Daftar Sekarang  </a> <br>
+					</div>
 				</form>
 			</div>
 		  <div class="clear"> </div>
