@@ -1,2 +1,2 @@
 # raot-event
-RaotEvent Organizer
+RaotEvent is a website for find or to organize your tournament eSport easily.
