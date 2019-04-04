@@ -42,12 +42,35 @@ include "ndas.php";
 <!-- About -->
 <div class="about">
 	 <div class="container">
-		 <h2>About</h2>
+		 <h2>About</h2><br/>
+		 <div class="abt-info-pic">
+				 <h3><strong>RAOT Your Tournament Partner</strong></h3>
+				 <img src="images/logo-bottom.png"/> <p class="justify">&nbsp &nbsp 	Esport atau disebut juga electronic sport (olahraga elektronik)  adalah  olahraga yang
+				 menggunakan game sebagai bidang kompotitif utama yang dimainkan oleh seorang profesional gamer.
+				 Beberapa waktu lalu, Esport sama sekali tidak dikenal. Akan teteapi, 
+				 sekarang ini fenonema esport terus berkembang dan memulai memancing perhatian dari 
+				 berbagai kalangan, Mulai dari gamer, media,hingga perusahan-perusahan besar yang sama sekali 
+				 tidak bergerak dibidang esport. Contoh dari permainan itu adalah CS GO , Leagoe of legend , DOTA 2 , Mobile Legend dan sebagainya.
+				 <p class="justify">&nbsp &nbsp 	Kini dunia E-Sports sudah berkembang dengan sangat pesat dan seluruh 
+				 dunia merasakan dampak dari ajang E-Sports yang terus menerus semakin besar dan 
+				 bertambah baik cabang dan juga para pesertanya. Bahkan kini E-Sports akan dipertandingkan dalam Asian
+				 Games 2022 sehingga memungkiinkan E-Sports untuk masuk ke ajang yang lebih besar lagi yaitu ajang Olimpiade
+				 sebagai salah satu cabang olah raga.</p>
+				 <p class="justify">&nbsp &nbsp 	Raot adalah portal informasi esports Indonesia. Kami menghubungkan penggemar game Indonesia dengan dunia esports yang mereka sukai,
+				 baik lokal maupun internasional, melalui konten yang disajikan secara mendalam dan komprehensif.
+				 Berdasarkan latar belakang tersebut maka dari itu, kami sebagai Developer ingin mempermudah
+				 penyelengara event esport dalam mengiklankan acara event esport yang akan diselenggarakan .
+				 Tujuannya yaitu agar Peserta yang membutuhkan informasi mengenai event esport bisa mencari 
+				 tau dengan mudah melalui web ini. Jadi pada dasarnya web ini sebagai media penghubung antara
+				 penyelenggara event esport dengan audien yang mencari informasi mengenai turnamen esport.</p>
+				 
+				
+			 </div>
 		 <div class="about-info-grids">
 			 <!--<div class="col-md-5 abt-pic">
-				 <img src="images/.jpg" class="img-responsive" alt=""/>
+				 <img src="images/5_Dota2-Riki.jpg" class="img-responsive" alt=""/>
 			 </div>-->
-			 <div class="col-md-7 abt-info-pic">
+			 <div class="abt-info-pic">
 				 <h3><strong>RAOT Your Tournament Partner</strong></h3>
 				 <p class="justify">&nbsp &nbsp 	Esport atau disebut juga electronic sport (olahraga elektronik)  adalah  olahraga yang
 				 menggunakan game sebagai bidang kompotitif utama yang dimainkan oleh seorang profesional gamer.

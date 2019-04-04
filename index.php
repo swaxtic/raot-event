@@ -327,10 +327,11 @@ include "config.php";
 			 </div>		
 			 <div class="clearfix"></div>
 		 </div>-->
-		 	<div style="text-align: center;">
+		 	
  				
 			 <!..gambar>
-			 <img src="images/RAOT-Circlezz.png"/>
+			 
+			 
 
 			</div>
 		 
@@ -339,7 +340,10 @@ include "config.php";
 
 <div class="copywrite">
 	 <div class="container">
+	 <div style="text-align: center;">
+		 <img src="images/logo-bottom.png"/><br/><br/>
 		 <p> © 2019 RAOT-event Dev. All rights reserved</p>
+	 </div>
 	 </div>
 </div>
 
