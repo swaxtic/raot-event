@@ -25,7 +25,7 @@ session_start();
 <script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
 
 <script src="js/jquery.min.js"></script>
-
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 </head>
 <body>
 <!-- header -->
@@ -39,7 +39,7 @@ include "ndas.php";
 		   <?php
 		   $id =$_GET['detail'];
 		   if(isset($_GET['detail'])){
-		       $sql     ="select * from event natural join panitia where idEvent='$id' AND uplink=id_panitia";
+		       $sql     = "select * from event natural join panitia where idEvent='$id' AND uplink=id_panitia";
 		       $que     = mysqli_query($konak,$sql);
 		      
 		       while ($res=mysqli_fetch_array($que)){
@@ -49,65 +49,86 @@ include "ndas.php";
 			<div class="col-md-8 blog-left" >
 				<div class="blog-info">
 					<div class="sub-trailer">
-					    <div class="clearfix"> </div>
+					    <div class="clearfix">
+							<!-- foto panitia -->
+							<img src="images/coc-logo.png" alt="..." class="img-user">
+							<div class="col-md-6 profilev">
+									<a href="http://103.28.53.243/~raoteven/event.php?detail=22"><?php echo $res['nama']; ?></a><br>
+									Member Since 
+							 
+					   </div>
+							<!-- end foto panitia -->
+							 </div>
 				   </div>
 					<div class="blog-info-text">
-			            <div class="col-md-7 abt-info-pic">
-			                <h3><strong><?php echo $res['nm_event']; ?></strong></h3> By <?php echo $res['nick']; ?></a></br>
-					</br> 
-		 	                </div>
-						<div class="blog-img">
-						<figure>
-		<link rel="stylesheet" type="text/css" href="css/Fancybox/dist/jquery.fancybox.min.css">
-    	<a href="assetsz/gambir/<?php echo $res['foto']; ?>" data-fancybox data-caption="Caption for single image">
-	    	<img class="w-100 rounded" src="assetsz/gambir/<?php echo $res['foto']; ?>" alt="<?php echo $res['nm_event']; ?>" width='680px' height='316px'/>
-		</a>
-	                	</figure>
-						</div>
-					</br>
+			            <div class="clearfix">
+											<br>
+			                <h3><strong><?php echo $res['nm_event']; ?></strong></h3>
+											 </div>
+				<!-- Poster Event -->
+	<hr class='gradient1'>
+	<div class="blog-img">
+		<figure>
+			<link rel="stylesheet" type="text/css" href="css/Fancybox/dist/jquery.fancybox.min.css">
+    		<a href="assetsz/gambir/<?php echo $res['foto']; ?>" data-fancybox data-caption="<?php echo $res['nm_event']; ?>">
+	    		<img class="w-100 rounded" src="assetsz/gambir/<?php echo $res['foto']; ?>" alt="<?php echo $res['nm_event']; ?>" width='680px' height='316px'/>
+				</a>
+	  </figure>
+	</div>
+				<!-- Poster Event END -->
+			<hr class='gradient1'>
+			<!-- Desc -->
+			<h4><strong>About This Tournament</strong></h4>
+				<p><?php echo $res['deskripsi']; ?></p><br>
+			<!-- Desc -->			
 					 <!-- Tab links -->
-						<div class="nav nav-tabs">
-						  <button class="tablinks" onclick="openCity(event, 'London')">Overview</button>
-						  <button class="tablinks" onclick="openCity(event, 'Paris')">Participants</button>
-						  <button class="tablinks" onclick="openCity(event, 'Tokyo')">Bracket</button>
-						</div>
+					<div class="nav">
+					<ul class="nav nav-tabs">
+    <li class="active"><a href="#overview">Overview</a></li>
+    <li><a href="#participants">Participants</a></li>
+    <li><a href="#bracket">Bracket</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
 
-						<!-- Tab content -->
-						<div id="London" class="tabcontent">
-						  <h3>-</h3>
-						  <p>-</p>
-						</div>
-
-						<div id="Paris" class="tabcontent">
-						  <h3>-</h3>
-						  <p>-</p>
-						</div>
-
-						<div id="Tokyo" class="tabcontent">
-						  <h3>-</h3>
-						  <p>-</p>
-						</div> 		
-						<p class="snglp">
-						<b>Description</b>
-                        <p><?php echo $res['deskripsi']; ?></p>
-                        <b>Rules/Peraturan</b>
-                        <p><?php echo $res['rules']; ?></p>
-                        <b>Tanggal Tournament</b>
-                        <p><?php echo $res['tgl']; ?></p>
-                        <b>Alamat</b>
-                        <p><?php echo $res['alamat']; ?></p>
-                        <b>Mode</b>
-                        <p><?php echo $res['mode']; ?></p>
-                        </p>
-		
-	
-					</div>
+  <div class="tab-content">
+    <div id="overview" class="tab-pane fade in active">
+			<br>
+			<b>Rules/Peraturan</b>
+					<p><?php echo $res['rules']; ?></p><br>
+				<b>Tanggal Tournament</b>
+        	<p><?php echo $res['tgl']; ?></p><br>
+        <b>Alamat</b>
+          <p><?php echo $res['alamat']; ?></p><br>
+        <b>Mode</b>
+          <p><?php echo $res['mode']; ?></p><br>
+		</div>
+    <div id="participants" class="tab-pane fade">
+		<br>
+			<b>Pending</b>
+			<p></p>
+		<br>
+			<b>Active</b>
+      <p></p>
+    </div>
+    <div id="bracket" class="tab-pane fade">
+      <h3>Menu 2</h3>
+      <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam.</p>
+    </div>
+    <div id="contact" class="tab-pane fade">
+      <h3>Menu 3</h3>
+      <p>Eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
+    </div>
+  </div>
+</div>
+						<!-- Tab content END -->
+						<!-- Tab links END --> 		
+</div>
 					<!--
 					<div class="comment-icons">
 						<ul>
 							<li><span></span><a href="#">Mobile Legend</a> </li>
 							<li><span class="clndr"></span>21 Desember 2018</li>
-							<li><span class="admin"></span> <a href="#"><?php echo $kuerinick['nick']; ?></a></li>
+							<li><span class="admin"></span> <a href="#"></a></li>
 							<li><span class="cmnts"></span> <a href="#">5 comments</a></li>
 							<li><a href="#" class="like">15</a></li>
 						</ul>
@@ -119,7 +140,10 @@ include "ndas.php";
 			}
 		    }
 			?>
-			<!-- <div class="col-md-4 single-page-right">
+			
+			<!-- KANAN  -->
+			<!--
+			<div class="col-md-4 single-page-right">
 				<div class="category blog-ctgry">
 					<h4>Top Games</h4>
 					<div class="list-group">
@@ -132,7 +156,7 @@ include "ndas.php";
 						<a href="single.html" class="list-group-item">League Of Legend</a>
 						<a href="single.html" class="list-group-item">Other</a>
 					</div>
-				</div>	
+				</div>
 				<div class="recent-posts">
 					<h4>Recent posts</h4>
 					<div class="recent-posts-info">
@@ -161,7 +185,9 @@ include "ndas.php";
 					</div>
 					<div class="clearfix"> </div>
 				</div>				
-			</div> -->
+			</div> 
+		-->
+			<!-- KANAN END --> 
 			<div class="clearfix"> </div>
 		</div>	
 </div>	
@@ -204,36 +230,17 @@ include "ndas.php";
 	 </div>
 </div>
 <!---->
- 
+ 	<script src="css/Fancybox/dist/jquery.fancybox.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
 
-<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
-	<script src="css/Fancybox/dist/jquery.fancybox.min.js"></script>
-	
-	<script type="text/javascript">
-		
-		
-	function openCity(evt, cityName) {
-	  // Declare all variables
-	  var i, tabcontent, tablinks;
+<script type="text/javascript">
 
-	  // Get all elements with class="tabcontent" and hide them
-	  tabcontent = document.getElementsByClassName("tabcontent");
-	  for (i = 0; i < tabcontent.length; i++) {
-		tabcontent[i].style.display = "none";
-	  }
-
-	  // Get all elements with class="tablinks" and remove the class "active"
-	  tablinks = document.getElementsByClassName("tablinks");
-	  for (i = 0; i < tablinks.length; i++) {
-		tablinks[i].className = tablinks[i].className.replace(" active", "");
-	  }
-
-	  // Show the current tab, and add an "active" class to the button that opened the tab
-	  document.getElementById(cityName).style.display = "block";
-	  evt.currentTarget.className += " active";
-	} 
-
-	</script>
+$(document).ready(function(){
+  $(".nav-tabs a").click(function(){
+    $(this).tab('show');
+  });
+});
+</script>
 	
 </body>
 

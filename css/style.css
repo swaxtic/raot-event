@@ -328,9 +328,7 @@ ul.callbacks_tabs.callbacks1_tabs {
 	margin:0.7em 0;
 	line-height:1.8em;
  }
-.game-grid img{
-	
-}
+
  /*-- latest --*/
 .latest{
 	padding-bottom:4em;
@@ -364,8 +362,21 @@ ul.callbacks_tabs.callbacks1_tabs {
 .sub-img img{
  width:100%;
 }
+/* profil event */
+.profilev {
+  float:right;
+  font-size: 1em;
+  margin-right: 250px;
+ }
 .sub-text {
  float:right;
+}
+.profilev a {
+  
+  font-size:30px;
+  color: #5bb2fc;
+  font-family: 'Play-Regular';
+	text-decoration:none;
 }
 .sub-text a {
   padding: 0.5em;
@@ -1060,6 +1071,11 @@ font-weight:600;
 h3.ghj {
 	color: #000;
 	font-size: 2em !important;
+	margin: 0 0 1em;
+}
+h3.ev {
+	color: #000;
+	font-size: 1.5em !important;
 	margin: 0 0 1em;
 }
 .headdings, .Buttons, .progress-bars, .alerts, .bread-crumbs, .pagenatin, .appearance, .distracted {
@@ -2572,6 +2588,20 @@ ul.callbacks_tabs.callbacks1_tabs {
 .blog-info p {
   margin-top: 0.5em;
 }
+
+.detail-event {
+  font: 700 1.8125rem/1.2em;
+    font-style: normal;
+    font-variant-caps: normal;
+    font-weight: 700;
+    font-stretch: normal;
+    font-size: 72px;
+    line-height: 1.2em;
+letter-spacing: -0.05rem;
+
+margin: 1.25rem 0;
+}
+
 /* Style the tab */
 .tab {
   overflow: hidden;
@@ -2606,4 +2636,4 @@ ul.callbacks_tabs.callbacks1_tabs {
   padding: 6px 12px;
   border: 1px solid #ccc;
   border-top: none;
-} 
+}
