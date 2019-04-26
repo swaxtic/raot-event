@@ -68,12 +68,19 @@
                         <!--/.sidebar-->
                     </div>
                     <!--/.span3-->
+                    
                     <div class="span9">
 					<div class="content">
-
+                    <div class="module">
+                        <div class="module-head">
+                        </div>
+                        <div class="module-body">
+                                Windows 8                                         
+                        </div>
+                    </div>
 						<div class="module">
 							<div class="module-head">
-								<h3>Add Your Tournaments Info</h3>
+								<h3>Manage Your Tournaments Info</h3>
 							</div>
 							<div class="module-body">
 
@@ -173,6 +180,16 @@
 									</form>
 							</div>
 						</div>
+
+                        <div class="module">
+                                <div class="module-head">
+                                    <h3>
+                                        AMMA</h3>
+                                </div>
+                                <div class="module-body">
+                                    asaa
+                                </div>
+                        </div>
 
 						
 						

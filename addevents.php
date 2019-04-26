@@ -132,7 +132,7 @@ else { ?>
 						 <textarea class="ckeditor" name="deskripsi" placeholder="Deskripsikan Event Sedetail mungkin.." required/></textarea>
 						 <h4>Rules</h4>
 						 <textarea class="ckeditor" name="rules" placeholder="Masukkan Peraturan, Mis: jumlah peserta,dll" required/></textarea>
-					Gambar Event (Poster,dsb)<input type="file" name="gambarEvent" id="gambarEvent"><br>
+					Gambar Event (Poster,dsb) <input type="file" name="gambarEvent" id="gambarEvent"><br>
 					<input type="submit" name="submitEv" value="SUBMIT"/>
 				 </div>
 				 <div class="clearfix"></div>

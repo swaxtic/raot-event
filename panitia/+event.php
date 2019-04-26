@@ -1,4 +1,4 @@
-<?
+<?php
 include "config.php";
 
 error_reporting(E_ALL);
@@ -7,7 +7,7 @@ $currentDir = getcwd();
 if(isset($_POST['submitEv'])) {
     session_start();
     $ekstensi = array('jpg','png','jpeg');
-    $target_dir     = "assetsz/gambir/";
+    $target_dir     = "/raot-event/assetsz/gambir/";
     $target_file    = $target_dir . $_FILES['gambarEvent']['name'];
     $fileName       = $_FILES['gambarEvent']['name'];
     $x              = explode('.',$fileName);
@@ -30,9 +30,10 @@ if($fileName != ""){
     $rando = rand(1,10000);
     $nfile = $rando."-".$fileName;
     
+    
     if(in_array($fileExtension,$ekstensi)==true){
         if($ukuran < 2000000){
-            move_uploaded_file($_FILES['gambarEvent']['tmp_name'],$target_dir.$nfile);
+            move_uploaded_file($_FILES['gambarEvent']['tmp_name'],$_SERVER['DOCUMENT_ROOT'].$target_dir.$nfile);
             $simp   =   "insert into event (nm_event,foto,game,platform,tgl,deskripsi,rules,alamat,mode,uplink,tgl_upload) values ('$eventName','$nfile','$namaGame','$Platform','$tgl','$desk','$rules','$Alamat','$mode','$id_panitia',now())";
             if(mysqli_query($konak,$simp)){
                 $q      = "select idEvent from event WHERE foto ='$nfile'";
@@ -41,8 +42,8 @@ if($fileName != ""){
             ?>
             
             <p>Success Create your Event, will be redirected to login page
-            <a href="event.php?detail=<? echo $res['idEvent']; ?>">Link</a></p>
-                <?
+            <a href="/event.php?detail=<?php echo $res['idEvent']; ?>">Link</a></p>
+                <?php
                 }else{
                     echo $id_panitia;
                     print_r($_SESSION);
