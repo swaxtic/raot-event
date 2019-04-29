@@ -71,7 +71,7 @@
 				    					$que 	= mysqli_query($konak,$sql);				    
 				    					while($res=mysqli_fetch_array($que)){
 										?>
-                                       <a href="event.php?detail=<?php echo $res['idEvent']; ?>" class="btn-box big span4"><i class=""></i><b><?php echo $res['nm_event']; ?></b>
+                                       <a href="manageevent.php?detail=<?php echo $res['idEvent']; ?>" class="btn-box big span4"><i class=""></i><b><?php echo $res['nm_event']; ?></b>
                                         <p class="text-muted">
                                             -</p>
                                     </a>

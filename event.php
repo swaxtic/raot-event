@@ -111,12 +111,10 @@ include "ndas.php";
       <p></p>
     </div>
     <div id="bracket" class="tab-pane fade">
-      <h3>Menu 2</h3>
-      <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam.</p>
+      <p>Bracket Here</p>
     </div>
     <div id="contact" class="tab-pane fade">
-      <h3>Menu 3</h3>
-      <p>Eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
+      <p>Contact Person</p>
     </div>
   </div>
 </div>
@@ -142,51 +140,45 @@ include "ndas.php";
 			?>
 			
 			<!-- KANAN  -->
-			<!--
+			<?php
+		       $sql1     = "select * from daftarevent where id_event='$id'";
+					 $que1     = mysqli_query($konak,$sql1);
+					 $data = array ();
+					 while (($row = mysqli_fetch_array($que1)) != null){
+						 $data[] = $row;
+					 }
+						 $cont = count ($data);
+		   ?>
 			<div class="col-md-4 single-page-right">
 				<div class="category blog-ctgry">
-					<h4>Top Games</h4>
+					<h4>Registration Open</h4>
 					<div class="list-group">
-						<a href="single.html" class="list-group-item">Dota 2</a>
-						<a href="single.html" class="list-group-item">CS:GO</a>
-						<a href="single.html" class="list-group-item">PUBG</a>
-						<a href="single.html" class="list-group-item">Mobile Legends</a>
-						<a href="single.html" class="list-group-item">Arena Of Valor</a>
-						<a href="single.html" class="list-group-item">Point Blank</a>
-						<a href="single.html" class="list-group-item">League Of Legend</a>
-						<a href="single.html" class="list-group-item">Other</a>
+						<div class="list-group-item"><?php echo $cont ?> Player Registered.
+						 </div>
+						 <?php if(!isset($_SESSION['status'])){ ?>
+							<center> <a href="login.php" class="list-group-item">  <strong> Login to join the tournament </strong> </a> </center>
+						<?php
+						}else{ ?>
+							<center> <a href="login.php" class="list-group-item" type="submit">  <strong> JOIN THE TOURNAMENT </strong> </a> </center>
+			<?php
+			if(isset($_POST['register'])) {
+		       $sql1     = "select * from daftarevent where id_event='$id'";
+					 $que1     = mysqli_query($konak,$sql1);
+					 $data = array ();
+					 while (($row = mysqli_fetch_array($que1)) != null){
+						 $data[] = $row;
+					 }
+						 $cont = count ($data);
+					}
+		  ?>
+
+						<?php
+						} 
+													?>
+						 </div>
 					</div>
-				</div>
-				<div class="recent-posts">
-					<h4>Recent posts</h4>
-					<div class="recent-posts-info">
-						<div class="posts-left sngl-img">
-							<a href="single.html"> <img src="images/img16.jpg" class="img-responsive zoom-img" alt=""/> </a>
-						</div>
-						<div class="posts-right">
-							<label>March 5, 2015</label>
-							<h5><a href="single.html">Finibus Bonorum</a></h5>
-							<p>Lorem ipsum dolor sit amet, consectetur adipisicing incididunt.</p>
-							<a href="single.html" class="btn btn-primary hvr-rectangle-in">Read More</a>
-						</div>
-						<div class="clearfix"> </div>
-					</div>	
-					<div class="recent-posts-info">
-						<div class="posts-left sngl-img">
-							<a href="single.html"> <img src="images/img17.jpg" class="img-responsive zoom-img" alt=""/></a>
-						</div>
-						<div class="posts-right">
-							<label>March 1, 2015</label>
-							<h5><a href="single.html">Finibus Bonorum</a></h5>
-							<p>Lorem ipsum dolor sit amet, consectetur adipisicing incididunt.</p>
-							<a href="single.html" class="btn btn-primary hvr-rectangle-in">Read More</a>
-						</div>
-						<div class="clearfix"> </div>
-					</div>
-					<div class="clearfix"> </div>
 				</div>				
 			</div> 
-		-->
 			<!-- KANAN END --> 
 			<div class="clearfix"> </div>
 		</div>	

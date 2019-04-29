@@ -29,6 +29,7 @@ include "config.php";
 		<div class="design-w3l">
 			<div class="mail-form-agile">
 				<form action="daftar.php" method="post">
+					<input type="text" name="nama" placeholder="Put Your Name..." required=""/>
 					<input type="text" name="nickname" placeholder="Choose a nickname..." required=""/>
 					<input type="text" name="email" placeholder="emailku@domain.com" required=""/>
 					<input type="password"  name="password" class="padding" placeholder="Password" required=""/>

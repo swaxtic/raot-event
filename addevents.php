@@ -96,56 +96,8 @@ include "ndas.php"
 
 <?php
 }
-else { ?>
-<div class="pages">
-		<div class="contact">
-	    <div class="container">
-		 <div class="contact-head">
-		     <div class="contact-head">
-		 	 <h2>Add Your Event</h2>
-		 	 <div class="alerts">
-			   <div class="alert alert-danger" role="alert">
-					<strong>Perhatian</strong> Deskripsikan event anda sedetail mungkin, masukkan deskripsi berupa hadiah,contact person,atau link terkait.
-			   </div>
-			   <div class="alert alert-danger" role="alert">
-					Inputkan rules sejelas dan sedetail mungkin sesuai dari event yang akan diselenggarakan.
-			   </div>
-		    </div>
-			  <form action="+event.php" method="post" enctype="multipart/form-data">
-				  <div class="col-md-6 contact-left"> 
-				    <h4>Nama Event</h4>
-					<input type="text" class="text" name="namaevent" placeholder="Nama Event..." required=""/>
-					<h4>Nama Game</h4>
-					<input type="text" class="text" name="namagame" placeholder="Nama Game" required=""/>
-					<h4>Platform</h4>
-					<input type="text" class="text" name="platform" placeholder="Platform" required=""/>
-					<h4>Tanggal Tournament</h4>
-					<input type="text" class="text" name="tanggal" placeholder="DD/MM/YYYY" required=""/>
-					<h4>Alamat</h4>
-					<input type="text" class="text" name= "alamat" placeholder="Alamat" required=""/>
-					<h4>Mode</h4>
-					<input type="text" class="text" name="mode" placeholder="Mode" required=""/>
-					
-				 </div>
-				 <div class="col-md-6 contact-right">
-				        <h4>Deskripsi</h4>
-						 <textarea class="ckeditor" name="deskripsi" placeholder="Deskripsikan Event Sedetail mungkin.." required/></textarea>
-						 <h4>Rules</h4>
-						 <textarea class="ckeditor" name="rules" placeholder="Masukkan Peraturan, Mis: jumlah peserta,dll" required/></textarea>
-					Gambar Event (Poster,dsb) <input type="file" name="gambarEvent" id="gambarEvent"><br>
-					<input type="submit" name="submitEv" value="SUBMIT"/>
-				 </div>
-				 <div class="clearfix"></div>
-				 
-			 </form>
-			 
-		 </div>
-			   <div class="clearfix"> </div>
-	    </div>
-	    </div>
-	</div>
-
-<?php
+else {
+ header("location:panitia/index.php");
 }
 ?>
 <!----pages-end---->

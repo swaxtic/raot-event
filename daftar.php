@@ -2,6 +2,7 @@
     include "config.php";
     if(isset($_POST['register'])) { // jika submit di tekan
         //Validasi
+        $cnama = $_POST['nama'];
         $cnick = $_POST['nickname'];
         $cemail = $_POST['email'];
         $cpass = md5($_POST['password']);
@@ -19,7 +20,7 @@
         }else if (!preg_match("(^[a-zA-Z0-9_]{1,}$)", $cnick)) {
             echo "Invalid Nickname"; 
         }else{
-            $simp="insert into panitia (nick,email,pass) values ('$cnick','$cemail','$cpass')";
+            $simp="insert into panitia (nama,nick,email,pass) values ('$cnama','$cnick','$cemail','$cpass')";
             
             if(mysqli_query($konak,$simp)){ ?>
         <p>Success Create your account, You will be redirected to login page in <span id="counter">5</span> second(s).</p>
