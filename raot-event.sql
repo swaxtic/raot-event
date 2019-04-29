@@ -1,13 +1,15 @@
 -- phpMyAdmin SQL Dump
--- version 4.5.1
--- http://www.phpmyadmin.net
+-- version 4.8.1
+-- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: 26 Apr 2019 pada 21.49
--- Versi Server: 10.1.19-MariaDB
--- PHP Version: 5.6.28
+-- Waktu pembuatan: 29 Apr 2019 pada 11.00
+-- Versi server: 10.1.33-MariaDB
+-- Versi PHP: 7.2.6
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+SET AUTOCOMMIT = 0;
+START TRANSACTION;
 SET time_zone = "+00:00";
 
 
@@ -19,6 +21,27 @@ SET time_zone = "+00:00";
 --
 -- Database: `raot-event`
 --
+
+-- --------------------------------------------------------
+
+--
+-- Struktur dari tabel `daftarevent`
+--
+
+CREATE TABLE `daftarevent` (
+  `id_user` int(11) NOT NULL,
+  `id_event` int(11) NOT NULL,
+  `status` int(1) NOT NULL DEFAULT '0'
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data untuk tabel `daftarevent`
+--
+
+INSERT INTO `daftarevent` (`id_user`, `id_event`, `status`) VALUES
+(12, 13, 0),
+(16, 13, 0),
+(14, 13, 0);
 
 -- --------------------------------------------------------
 
@@ -71,38 +94,43 @@ CREATE TABLE `panitia` (
 INSERT INTO `panitia` (`nick`, `nama`, `email`, `pass`, `id_panitia`) VALUES
 ('Sandy', 'Sandy', 'sandydwi75@gmail.com', '0ddd63424b5af786fdd47bcc9209bcf3', 12),
 ('raot', 'Raot', 'raot@raot.com', '974fd02a39f94ff7180fff16b3358212', 14),
-('swaxtic', 'Swaxtic Hub', 'swaxtic@raot.id', '2e33a9b0b06aa0a01ede70995674ee23', 2);
+('swaxtic', 'Swaxtic Hub', 'swaxtic@raot.id', '2e33a9b0b06aa0a01ede70995674ee23', 2),
+('Admin', '', 'admin@admin.com', '21232f297a57a5a743894a0e4a801fc3', 16),
+('dip', 'Adip', 'adip@gmail.com', '2e33a9b0b06aa0a01ede70995674ee23', 17);
 
 --
 -- Indexes for dumped tables
 --
 
 --
--- Indexes for table `event`
+-- Indeks untuk tabel `event`
 --
 ALTER TABLE `event`
   ADD PRIMARY KEY (`idEvent`);
 
 --
--- Indexes for table `panitia`
+-- Indeks untuk tabel `panitia`
 --
 ALTER TABLE `panitia`
   ADD PRIMARY KEY (`id_panitia`);
 
 --
--- AUTO_INCREMENT for dumped tables
+-- AUTO_INCREMENT untuk tabel yang dibuang
 --
 
 --
--- AUTO_INCREMENT for table `event`
+-- AUTO_INCREMENT untuk tabel `event`
 --
 ALTER TABLE `event`
   MODIFY `idEvent` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
+
 --
--- AUTO_INCREMENT for table `panitia`
+-- AUTO_INCREMENT untuk tabel `panitia`
 --
 ALTER TABLE `panitia`
-  MODIFY `id_panitia` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
+  MODIFY `id_panitia` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
+COMMIT;
+
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
