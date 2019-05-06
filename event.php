@@ -81,9 +81,9 @@ include "ndas.php";
 			<h4><strong>About This Tournament</strong></h4>
 				<p><?php echo $res['deskripsi']; ?></p><br>
 			<!-- Desc -->			
-					 <!-- Tab links -->
-					<div class="nav">
-					<ul class="nav nav-tabs">
+			<!-- Multi Tab links -->
+			<div class="nav">
+			<ul class="nav nav-tabs">
     <li class="active"><a href="#overview">Overview</a></li>
     <li><a href="#participants">Participants</a></li>
     <li><a href="#bracket">Bracket</a></li>

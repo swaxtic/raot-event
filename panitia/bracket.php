@@ -38,6 +38,7 @@
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         <link type="text/css" href='http://fonts.googleapis.com/css?family=Open+Sans:400italic,600italic,400,600'
             rel='stylesheet'>
+        <link type="text/css" href="bracket/jquery.bracket.min.css" rel="stylesheet"/>
     </head>
     <?php include 'header.php'?>
         <!-- /navbar -->
@@ -91,101 +92,32 @@
                     <div class="module">
                                 <div class="module-head">
                                     <h3>
-                                        <?php echo $res['nm_event']; ?> - Manage Participant</h3>
+                                        <?php echo $res['nm_event']; ?> - Generate Bracket</h3>
                                 </div>
                         </div>
-            <?php //...MENGHITUNG JUMLAH PENDAFTAR YANG DI TERIMA
-                  //...LALU MEMBANDINGKAN DENGAN SLOT
-		        $sqldaftar     = "select * from daftarevent where id_event='$id' AND status=1";
-			    $quedaftar     = mysqli_query($konak,$sqldaftar);
-				$data          = array ();
-			    while (($row = mysqli_fetch_array($quedaftar)) != null){
-					$data[] = $row;
-			    }
-                    $cont = count ($data);
-                    $sqlslot = "select slot from event where idEvent='$id'";
-                    $queslot = mysqli_query($konak,$sqlslot);
-                    $slot    = mysqli_fetch_assoc($queslot);
-
-		   ?>
                 <div class="module">
                     <div class="module-head">
                         <h3>
-                            All Participant</h3>
+                            Generate Bracket</h3>
                         </div>
-                            <div class="module-option clearfix">
-                                <form>
-                                <div class="input-append pull-left">
-                                    <input type="text" class="span3" placeholder="Search by name...">
-                                    <button type="submit" class="btn">
-                                        <i class="icon-search"></i>
-                                    </button>
-                                    <button type="button" class="btn">
-                                        Partcipant <?php echo $cont; echo "/"; echo $slot['slot'];   ?> </button>
-                                </div>
-                                </form>
-                                <div class="btn-group pull-right" data-toggle="buttons-radio">
-                                    <button type="button" class="btn">
-                                        All</button>
-                                    <button type="button" class="btn">
-                                        Pending</button>
-                                    <button type="button" class="btn">
-                                        Active</button>
-                                </div>
-                            </div>
                         <div class="module-body">
-                        <label class="control-label" for="basicinput">Pending </label>
-                        <div class="row-fluid">
-                        
-                    <?php
-                        $id =$_GET['detail'];
-                        if(isset($_GET['detail'])){
-                            $sql     = "SELECT event.idEvent, event.nm_event, daftarevent.status, daftarevent.id_user, panitia.nama, panitia.nick
-
-                            FROM daftarevent JOIN panitia
-                            
-                            ON daftarevent.id_user = panitia.id_panitia
-                            
-                            JOIN event
-                            
-                            ON event.idEvent = daftarevent.id_event
-                            
-                            WHERE event.idEvent = $id AND daftarevent.status= '0'";
-                            $que     = mysqli_query($konak,$sql);
-                           
-                            while ($res=mysqli_fetch_array($que)){
-                    ?>
-                                <div class="span6">
-                                        <div class="media user">
-                                            <a class="media-avatar pull-left" href="#">
-                                                <img src="images/user.png">
-                                            </a>
-                                            <div class="media-body">
-                                                <h3 class="media-title">
-                                                    <?php echo $res['nama']; ?>
-                                                </h3>
-                                                <p>
-                                                    <small class="muted">@<?php echo $res['nick']; ?></small></p>
-                                                <div class="media-option btn-group shaded-icon">
-                                                    <button class="btn-success btn-small">
-                                                        <i class="icon-ok-sign"></i>
-                                                    </button>
-                                                    <button class="btn btn-small">
-                                                        <i class="icon-share-alt"></i>
-                                                    </button>
-                                                </div>
-                                            </div>
-                                        </div>
+                        <div class="module-option clearfix">
+                                    <div class="pull-right">
+                                        <a href="#" class="btn btn-primary">Generate Bracket</a>
                                     </div>
-                        <?php
-                            }
-                        
-                        ?>
-                        </div>
-                        <label class="control-label" for="basicinput">Active </label>
+                                </div>
                         <div class="row-fluid">
+                        <table class="table table-bordered">
+                        <thead>
+							<tr>
+							<th>#</th>
+							<th>Nama Tim</th>
+							<th>Nama Pendaftar</th>
+							<th>Username</th>
+							</tr>
+						</thead>
                         <?php
-                            $sql     = "SELECT event.idEvent, event.nm_event, daftarevent.status, daftarevent.id_user, panitia.nama, panitia.nick
+                            $sql     = "SELECT event.idEvent, event.nm_event, daftarevent.status, daftarevent.id_user, panitia.nama, panitia.nick, daftarevent.tim
 
                             FROM daftarevent JOIN panitia
                             
@@ -197,39 +129,35 @@
                             
                             WHERE event.idEvent = $id AND daftarevent.status= '1'";
                             $que     = mysqli_query($konak,$sql);
-                           
+                            $r=0;
                             while ($res=mysqli_fetch_array($que)){
+                            $r++;
                     ?>
                                 <!--/.row-fluid-->
-                                    <div class="span6">
-                                        <div class="media user">
-                                            <a class="media-avatar pull-left" href="#">
-                                                <img src="images/user.png">
-                                            </a>
-                                            <div class="media-body">
-                                                <h3 class="media-title">
-                                                    <?php echo $res['nama']; ?>
-                                                </h3>
-                                                <p>
-                                                    <small class="muted">@<?php echo $res['nick']; ?></small></p>
-                                                <div class="media-option btn-group shaded-icon">
-                                                    <button class="btn-success btn-small">
-                                                        <i class="icon-ok-sign"></i>
-                                                    </button>
-                                                    <button class="btn btn-small">
-                                                        <i class="icon-share-alt"></i>
-                                                    </button>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
+								  <tbody>
+									<tr>
+									  <td><?php echo $r; ?></td>
+									  <td><?php echo $res['tim']; ?></td>
+									  <td><?php echo $res['nama']; ?></td>
+									  <td><?php echo $res['nick']; ?></td>
+									</tr>
+                                  </tbody>								
                             <?php
                             }
-                            }
                             ?>
+                            </table>
                                 <!--/.row-fluid-->
+                            
                         </div>
+                        <div class="demo"> 
+                        
                     </div>
+                    </div>
+                    <div class="module-option clearfix">
+                                    <div class="pull-right">
+                                        <a href="#" class="btn btn-primary">SAVE</a>
+                                    </div>
+                                </div>
                     </div>
 						
 					</div><!--/.content-->
@@ -245,6 +173,72 @@
                 <b class="copyright">&copy; Raot </b>All rights reserved.
             </div>
         </div>
+        <!-- BAGAN START -->
+        <script src="bracket/jquery.min.js"></script>
+        <script src="bracket/jquery.bracket.min.js"></script>
+        <script>
+                    /* Custom data objects passed as teams */
+                    var customData = {
+                        teams : [
+                        [{name: "Team 1"}, {name: "Team2"}],
+                        [{name: "Team 3"}, {name: "Team 4"}]
+                        ],
+                        results : []
+                    }
+                        
+                    /* Edit function is called when team label is clicked */
+                        function edit_fn(container, data, doneCb) {
+                        var input = $('<input type="text">')
+                        input.val(data ? data.name : '')
+                        container.html(input)
+                        input.focus()
+                        input.blur(function() {
+                            var inputValue = input.val()
+                            if (inputValue.length === 0) {
+                            doneCb(null);
+                            } else {
+                            var AndName = inputValue.split(':') // Expects correct input
+                            doneCb({name: AndName[0]})
+                            }
+                        })
+                        }
+                        
+                    /* Render function ini dipanggil ketika label team di rubah
+                        *
+                        * 'state' berisi:
+                        * - empty-bye: No data or score and there won't team advancing to this place
+                        * - empty-tbd: No data or score yet. A team will advance here later
+                        * - entry-no-score: Data available, but no score given yet
+                        * - entry-default-win: Data available, score will never be given as opponent is BYE
+                        * - entry-complete: Data and score available
+                    */
+                    function render_fn(container, data, score, state) {
+                    switch(state) {
+                    case "empty-bye":
+                    container.append("No team")
+                    return;
+                    case "empty-tbd":
+                    container.append("Upcoming")
+                    return;
+                     
+                    case "entry-no-score":
+                    case "entry-default-win":
+                    case "entry-complete":
+                    container.append(data.name)
+                    return;
+                    }
+                    }
+                        
+                    $(function() {
+                    $('.demo').bracket({ //tambahclickfuntion u/ trigger generator
+                        init: customData,
+                        disableToolbar: true,
+                        disableTeamEdit: true,
+                        save: function(){}, 
+                        decorator: {edit: edit_fn,
+                                    render: render_fn}})
+                    })
+        </script>
         <script src="scripts/jquery-1.9.1.min.js" type="text/javascript"></script>
         <script src="scripts/jquery-ui-1.10.1.custom.min.js" type="text/javascript"></script>
         <script src="bootstrap/js/bootstrap.min.js" type="text/javascript"></script>

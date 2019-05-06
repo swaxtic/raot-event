@@ -110,6 +110,19 @@
 											<label class="control-label" name="tanggal" for="basicinput">Tanggal Event</label>
 											<div class="controls">
 												<input type="date" id="basicinput" name="tanggal" class="span8">
+											</div><br>
+
+											<label class="control-label">Slot/Size</label>
+											<div class="controls">
+											<select tabindex="1" data-placeholder="Select your tournament size.." class="span8" name="slot">
+													<option value="">Select here..</option>
+													<option value="2">2</option>
+													<option value="4">4</option>
+													<option value="8">8</option>
+													<option value="16">16</option>
+													<option value="32">32</option>
+													<option value="64">64</option>
+												</select>
 											</div>
 										</div>
 											

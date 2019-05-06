@@ -21,6 +21,7 @@ if(isset($_POST['submitEv'])) {
     $mode		=	$_POST['mode'];
     $desk		=	$_POST['deskripsi'];
     $rules		=	$_POST['rules'];
+    $slot       =   $_POST['slot'];
     $id_panitia =   $_SESSION['id_panitia']; //ambil session untuk mengisi uplink
     
 /******************************************************************************
@@ -34,7 +35,7 @@ if($fileName != ""){
     if(in_array($fileExtension,$ekstensi)==true){
         if($ukuran < 2000000){
             move_uploaded_file($_FILES['gambarEvent']['tmp_name'],$_SERVER['DOCUMENT_ROOT'].$target_dir.$nfile);
-            $simp   =   "insert into event (nm_event,foto,game,platform,tgl,deskripsi,rules,alamat,mode,uplink,tgl_upload) values ('$eventName','$nfile','$namaGame','$Platform','$tgl','$desk','$rules','$Alamat','$mode','$id_panitia',now())";
+            $simp   =   "insert into event (nm_event,foto,game,platform,tgl,deskripsi,rules,alamat,mode,uplink,slot,tgl_upload) values ('$eventName','$nfile','$namaGame','$Platform','$tgl','$desk','$rules','$Alamat','$mode','$id_panitia','$slot',now())";
             if(mysqli_query($konak,$simp)){
                 $q      = "select idEvent from event WHERE foto ='$nfile'";
 				$que    = mysqli_query($konak,$q);

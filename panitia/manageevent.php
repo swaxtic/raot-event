@@ -93,6 +93,10 @@
                                         <b><p class="text-muted">
                                             Add Participant<br><br></p></b>
                                     </a>
+                                    <a href="bracket.php?detail=<?php echo $res['idEvent']; ?>" class="btn-box big span4"><i class="icon-cogs"></i>
+                                        <b><p class="text-muted">
+                                            Generate Bracket<br><br></p></b>
+                                    </a>
                                 </div>                  
                             </div>
                             <!--/#btn-controls-->
