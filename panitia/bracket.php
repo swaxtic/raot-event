@@ -38,7 +38,7 @@
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         <link type="text/css" href='http://fonts.googleapis.com/css?family=Open+Sans:400italic,600italic,400,600'
             rel='stylesheet'>
-        <link type="text/css" href="bracket/jquery.bracket.min.css" rel="stylesheet"/>
+        <link type="text/css" href="../bracket/jquery.bracket.min.css" rel="stylesheet"/>
     </head>
     <?php include 'header.php'?>
         <!-- /navbar -->
@@ -86,7 +86,6 @@
                         <!--/.sidebar-->
                     </div>
                     <!--/.span3-->
-                    
                     <div class="span9">
 					<div class="content">
                     <div class="module">
@@ -94,11 +93,14 @@
                                     <h3>
                                         <?php echo $res['nm_event']; ?> - Generate Bracket</h3>
                                 </div>
-                        </div>
+                    </div>
                 <div class="module">
                     <div class="module-head">
                         <h3>
                             Generate Bracket</h3>
+                        </div>
+                        <div class="demo">
+                                    
                         </div>
                         <div class="module-body">
                         <div class="module-option clearfix">
@@ -149,9 +151,6 @@
                                 <!--/.row-fluid-->
                             
                         </div>
-                        <div class="demo"> 
-                        
-                    </div>
                     </div>
                     <div class="module-option clearfix">
                                     <div class="pull-right">
@@ -174,8 +173,8 @@
             </div>
         </div>
         <!-- BAGAN START -->
-        <script src="bracket/jquery.min.js"></script>
-        <script src="bracket/jquery.bracket.min.js"></script>
+        <script src="../bracket/jquery.min.js"></script>
+        <script src="../bracket/jquery.bracket.min.js"></script>
         <script>
                     /* Custom data objects passed as teams */
                     var customData = {

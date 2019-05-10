@@ -27,7 +27,6 @@
             //echo "Invalid email format";
         }else{
             $simp="insert into panitia (nama,nick,email,pass) values ('$cnama','$cnick','$cemail','$cpass')";
-            
             if(mysqli_query($konak,$simp)){ ?>
         <p>Success Create your account, You will be redirected to login page in <span id="counter">5</span> second(s).</p>
         <script type="text/javascript">

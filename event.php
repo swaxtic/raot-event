@@ -159,22 +159,66 @@ include "ndas.php";
 							<center> <a href="login.php" class="list-group-item">  <strong> Login to join the tournament </strong> </a> </center>
 						<?php
 						}else{ ?>
-							<center> <a href="login.php" class="list-group-item" type="submit">  <strong> JOIN THE TOURNAMENT </strong> </a> </center>
+						<div class="nav">
+						<ul class="nav nav-tabs">	
+							<center> <a href="#daftarevent" class="list-group-item" type="submit">  <strong> JOIN THE TOURNAMENT </strong> </a> </center>
+						</ul>
+						<!-- FORM -->
+							<div class="tab-content">
+    					<div id="daftarevent" class="tab-pane">
+							<div class="list-group-item">
+								<div class="coment-form">
+							<form action="event.php" method="post">
+							<label class="control-label" for="basicinput">Nama Team</label><br>
+								<input type="text" name="namateam" placeholder="Nama Team" required=""/><br>
+							<label class="control-label" for="basicinput">Pendaftar</label><br>
+								<input type="text" name="nickname" value="<?php echo $_SESSION['nick'] ?>" disabled/>
+								<br>
+								<input type="submit" name="register" value="REGISTER">
+						</form>
+						</div>
+						 </div>
+				</div>
+						</div>
+						</div>
+  </div>
 			<?php
 			if(isset($_POST['register'])) {
-		       $sql1     = "select * from daftarevent where id_event='$id'";
-					 $que1     = mysqli_query($konak,$sql1);
-					 $data = array ();
-					 while (($row = mysqli_fetch_array($que1)) != null){
-						 $data[] = $row;
-					 }
-						 $cont = count ($data);
+				$nteam = $_POST['namateam'];
+				$idpanitia = $_SESSION['id_panitia'];
+				$idevent = $id;
+				$cekdaftar = "SELECT id_user FROM daftarevent WHERE id_user ='$idpanitia'";
+				$resultcek = $konak->query($cekdaftar);
+				if($resultcek ->num_rows>0){
+            echo "ERROR : Anda Sudah Mendaftar..";
+				}
+				// if else panitia tdk bisa mendaftar eventnya sendiri
+				else{
+					$ins="insert into daftarevent (id_user,tim,id_event) values ('$idpanitia','$nteam','$idevent')";
+            
+					if(mysqli_query($konak,$ins)){ ?>
+						<p>Success register to this Tournament, You will be redirected to event page <span id="counter">5</span> second(s).</p>
+						<script type="text/javascript">
+						function countdown() {
+							var i = document.getElementById('counter');
+							if (parseInt(i.innerHTML)<=0) {
+									location.href = 'event.php?detail=<?php echo $res['idEvent']; ?>';
+							}
+							i.innerHTML = parseInt(i.innerHTML)-1;
+						}
+						setInterval(function(){ countdown(); },1000);
+						</script>
+					<?php
+					}else {
+							echo "Error: " . $ins . "<br>" . mysqli_error($konak);
 					}
+				}
+			}
 		  ?>
 
-						<?php
+						<?php //ELSE LOGIN
 						} 
-													?>
+						?>
 						 </div>
 					</div>
 				</div>				
