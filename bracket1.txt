@@ -1,7 +1,1 @@
-{
-            teams : [
-            [{name: "Team 1"}, {name: "Team2"}],
-            [{name: "Team 3"}, {name: "Team 4"}]
-            ],
-            results : []
-        }
+<p>ahahahha</p>

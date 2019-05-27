@@ -94,18 +94,26 @@
                                         <?php echo $res['nm_event']; ?> - Generate Bracket</h3>
                                 </div>
                     </div>
+                    <div class="module">
+                                <div class="module-head">
+                                    <h3>
+                                        Bracket</h3>
+                                </div>
+                                <div class="module-body" id="contents">
+
+                                <p>0</p>
+
+                                </div>
+                    </div>
                 <div class="module">
                     <div class="module-head">
                         <h3>
                             Generate Bracket</h3>
                         </div>
-                        <div class="demo">
-                                    
-                        </div>
                         <div class="module-body">
                         <div class="module-option clearfix">
                                     <div class="pull-right">
-                                        <a href="#" class="btn btn-primary">Generate Bracket</a>
+                                        <a href="#" class="btn btn-primary" id="generate" >Generate Bracket</a>
                                     </div>
                                 </div>
                         <div class="row-fluid">
@@ -172,72 +180,17 @@
                 <b class="copyright">&copy; Raot </b>All rights reserved.
             </div>
         </div>
-        <!-- BAGAN START -->
-        <script src="../bracket/jquery.min.js"></script>
-        <script src="../bracket/jquery.bracket.min.js"></script>
         <script>
-                    /* Custom data objects passed as teams */
-                    var customData = {
-                        teams : [
-                        [{name: "Team 1"}, {name: "Team2"}],
-                        [{name: "Team 3"}, {name: "Team 4"}]
-                        ],
-                        results : []
-                    }
-                        
-                    /* Edit function is called when team label is clicked */
-                        function edit_fn(container, data, doneCb) {
-                        var input = $('<input type="text">')
-                        input.val(data ? data.name : '')
-                        container.html(input)
-                        input.focus()
-                        input.blur(function() {
-                            var inputValue = input.val()
-                            if (inputValue.length === 0) {
-                            doneCb(null);
-                            } else {
-                            var AndName = inputValue.split(':') // Expects correct input
-                            doneCb({name: AndName[0]})
-                            }
-                        })
-                        }
-                        
-                    /* Render function ini dipanggil ketika label team di rubah
-                        *
-                        * 'state' berisi:
-                        * - empty-bye: No data or score and there won't team advancing to this place
-                        * - empty-tbd: No data or score yet. A team will advance here later
-                        * - entry-no-score: Data available, but no score given yet
-                        * - entry-default-win: Data available, score will never be given as opponent is BYE
-                        * - entry-complete: Data and score available
-                    */
-                    function render_fn(container, data, score, state) {
-                    switch(state) {
-                    case "empty-bye":
-                    container.append("No team")
-                    return;
-                    case "empty-tbd":
-                    container.append("Upcoming")
-                    return;
-                     
-                    case "entry-no-score":
-                    case "entry-default-win":
-                    case "entry-complete":
-                    container.append(data.name)
-                    return;
-                    }
-                    }
-                        
-                    $(function() {
-                    $('.demo').bracket({ //tambahclickfuntion u/ trigger generator
-                        init: customData,
-                        disableToolbar: true,
-                        disableTeamEdit: true,
-                        save: function(){}, 
-                        decorator: {edit: edit_fn,
-                                    render: render_fn}})
-                    })
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js">
+        $(document).ready(function(){
+            $("#generate").click(function(){
+                $("#contents").load("bracket1.txt");
+            });
+        });
         </script>
+        
+                            
         <script src="scripts/jquery-1.9.1.min.js" type="text/javascript"></script>
         <script src="scripts/jquery-ui-1.10.1.custom.min.js" type="text/javascript"></script>
         <script src="bootstrap/js/bootstrap.min.js" type="text/javascript"></script>
@@ -245,6 +198,7 @@
         <script src="scripts/flot/jquery.flot.resize.js" type="text/javascript"></script>
         <script src="scripts/datatables/jquery.dataTables.js" type="text/javascript"></script>
         <script src="scripts/common.js" type="text/javascript"></script>
+
       
     </body>
 	<?php
