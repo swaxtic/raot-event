@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Waktu pembuatan: 06 Bulan Mei 2019 pada 11.01
+-- Waktu pembuatan: 27 Bulan Mei 2019 pada 11.17
 -- Versi server: 10.1.33-MariaDB
 -- Versi PHP: 7.2.6
 
@@ -50,7 +50,8 @@ INSERT INTO `daftarevent` (`id_user`, `tim`, `id_event`, `status`) VALUES
 (22, 'Milw0rm', 13, 1),
 (23, 'Mielo', 13, 1),
 (24, 'Xia5g', 13, 1),
-(17, 'Ueue9', 13, 0);
+(17, 'Ueue9', 13, 0),
+(29, 'TES', 13, 0);
 
 -- --------------------------------------------------------
 
@@ -114,7 +115,8 @@ INSERT INTO `panitia` (`nick`, `nama`, `email`, `pass`, `id_panitia`) VALUES
 ('pan8', 'Pan8', 'pan8@gmail.com', 'e10adc3949ba59abbe56e057f20f883e', 22),
 ('beandream', 'Bean Dream', 'beandream@gmail.com', 'e10adc3949ba59abbe56e057f20f883e', 23),
 ('syobon18', 'Syobon', 'syobon@gmail.com', 'e10adc3949ba59abbe56e057f20f883e', 24),
-('nicktes', 'namates', 'a@g.com', '8a518150ee17b87c2d17e894bc531a0c', 28);
+('nicktes', 'namates', 'a@g.com', '8a518150ee17b87c2d17e894bc531a0c', 28),
+('nichdaftar', 'tesdaftar', 'daftar@daftar.com', '2ac9cb7dc02b3c0083eb70898e549b63', 29);
 
 --
 -- Indexes for dumped tables
@@ -146,7 +148,7 @@ ALTER TABLE `event`
 -- AUTO_INCREMENT untuk tabel `panitia`
 --
 ALTER TABLE `panitia`
-  MODIFY `id_panitia` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=29;
+  MODIFY `id_panitia` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=30;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
