@@ -1,27 +1,31 @@
-﻿<body>
-        <div class="navbar navbar-fixed-top">
-            <div class="navbar-inner">
-                <div class="container">
-                    <a class="btn btn-navbar" data-toggle="collapse" data-target=".navbar-inverse-collapse">
-                        <i class="icon-reorder shaded"></i></a><a class="brand" href="index.php">RAOT EVENT ORGANIZER</a>
-                    <div class="nav-collapse collapse navbar-inverse-collapse">
-                        <ul class="nav pull-right">
-                            <li><a href="#"><?php echo $_SESSION['nick']; ?> </a></li>
-                            <li class="nav-user dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                                <img src="images/user.png" class="nav-avatar" />
-                                <b class="caret"></b></a>
-                                <ul class="dropdown-menu">
-                                    <li><a href="#">Your Profile</a></li>
-                                    <li><a href="#">Edit Profile</a></li>
-                                    <li><a href="#">Account Settings</a></li>
-                                    <li class="divider"></li>
-                                    <li><a href="#">Logout</a></li>
-                                </ul>
-                            </li>
-                        </ul>
-                    </div>
-                    <!-- /.nav-collapse -->
+    <div id="layout" class="pure-g">
+        <div class="sidebar pure-u-1 pure-u-md-3-24">
+            <div id="menu">
+                <div class="pure-menu">
+                    <p class="pure-menu-heading">
+                        RAOT<br>TOURNAMENT<br>ORGANIZER
+                        <a href="metu.php" class="button-error pure-button button-xxsmall">LOGOUT&raquo;</a>
+                    </p>
+                    <ul class="pure-menu-list">
+                        <li class="pure-menu-selected">
+                            <a href="dashboard.html" class="pure-menu-link">Dashboard</a>
+                        </li>
+                        <li>
+                            <a href="post-list.html" class="pure-menu-link">Posts List</a>
+                        </li>
+                        <li>
+                            <a href="post-form.html" class="pure-menu-link">Post Form</a>
+                        </li>
+                        <li class="menu-item-divided">
+                            <a href="option-list.html" class="pure-menu-link">Option List</a>
+                        </li>
+                        <li>
+                            <a href="option-form.html" class="pure-menu-link">Option Form</a>
+                        </li>
+                        <li class="menu-item-divided">
+                            <a href="profile.html" class="pure-menu-link">Profile</a>
+                        </li>
+                    </ul>
                 </div>
             </div>
-            <!-- /navbar-inner -->
         </div>
