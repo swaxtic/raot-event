@@ -53,7 +53,7 @@
                                        <div class="col-md-4 sed-md"><br>
 				 	    <div class="col-1">
 						 <a href="event.php?detail=<?php echo $res['idEvent']; ?>"></a>
-						 <h4><a href="event.php?detail=<?php echo $res['idEvent']; ?>"><?php echo $res['nm_event']; ?></a></h4>
+						 <h4><a href="manageevent.php?detail=<?php echo $res['idEvent']; ?>"><?php echo $res['nm_event']; ?></a></h4>
                          <p><?php echo substr($res['deskripsi'],0,100); ?></p>
                                     </a>
                                 <a class="btn btn-success" href="post-form.html">Edit</a>
