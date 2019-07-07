@@ -26,27 +26,15 @@
             <div id="menu">
                 <div class="pure-menu">
                     <p class="pure-menu-heading">
-                        Pure Admin
-                        <a href="login.html" class="pure-button button-xxsmall">OUT &raquo;</a>
+                        RAOT<br>TOURNAMENT<br>ORGANIZER
+                        <a href="metu.php" class="button-error pure-button button-xxsmall">LOGOUT&raquo;</a>
                     </p>
                     <ul class="pure-menu-list">
                         <li class="pure-menu-item">
-                            <a href="dashboard.html" class="pure-menu-link">Dashboard</a>
-                        </li>
-                        <li class="pure-menu-item">
-                            <a href="post-list.html" class="pure-menu-link">Posts List</a>
-                        </li>
-                        <li class="pure-menu-item pure-menu-selected">
-                            <a href="post-form.html" class="pure-menu-link">Post Form</a>
+                            <a href="index.php" class="pure-menu-link">My Tournament</a>
                         </li>
                         <li class="pure-menu-item menu-item-divided">
-                            <a href="option-list.html" class="pure-menu-link">Option List</a>
-                        </li>
-                        <li class="pure-menu-item">
-                            <a href="option-form.html" class="pure-menu-link">Option Form</a>
-                        </li>
-                        <li class="pure-menu-item menu-item-divided">
-                            <a href="profile.html" class="pure-menu-link">Profile</a>
+                            <a href="profile.php" class="pure-menu-link">Profile</a>
                         </li>
                     </ul>
                 </div>

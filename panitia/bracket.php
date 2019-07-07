@@ -26,106 +26,52 @@
     }else{
         
 ?>
+<!doctype html>
+<html lang="en">
 <head>
-    <head>
-        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Manage Your Tournaments</title>
-        <link type="text/css" href="bootstrap/css/bootstrap.min.css?t[timestamps]" rel="stylesheet">
-        <link type="text/css" href="bootstrap/css/bootstrap-responsive.min.css" rel="stylesheet">
-        <link type="text/css" href="css/theme.css" rel="stylesheet">
-        <link type="text/css" href="images/icons/css/font-awesome.css" rel="stylesheet">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-        <link type="text/css" href='http://fonts.googleapis.com/css?family=Open+Sans:400italic,600italic,400,600'
-            rel='stylesheet'>
-        <link type="text/css" href="../bracket/jquery.bracket.min.css" rel="stylesheet"/>
-    </head>
-    <?php include 'header.php'?>
-        <!-- /navbar -->
-        <div class="wrapper">
-            <div class="container">
-                <div class="row">
-                    <div class="span3">
-                        <div class="sidebar">
-                            <ul class="widget widget-menu unstyled">
-                                <li class="active"><a href="index.php"><i class="menu-icon fa fa-trophy"></i>My Tournaments
-                                </a></li>
-                                <!--<li><a href="activity.php"><i class="menu-icon icon-bullhorn"></i>News Feed </a>
-                                </li>-->
-                                <li><a href="message.php"><i class="menu-icon icon-inbox"></i>Inbox <b class="label green pull-right">
-                                    11</b> </a></li>
-                                <li><a href="task.php"><i class="menu-icon icon-tasks"></i>Tasks <b class="label orange pull-right">
-                                    19</b> </a></li>
-                            </ul>
-                            <!--/.widget-nav-->
-                            
-                            
-                            <!--
-                               <ul class="widget widget-menu unstyled">
-                                <li><a href="ui-button-icon.php"><i class="menu-icon icon-bold"></i> Buttons </a></li>
-                                <li><a href="ui-typography.php"><i class="menu-icon icon-book"></i>Typography </a></li>
-                                <li><a href="form.php"><i class="menu-icon icon-paste"></i>Forms </a></li>
-                                <li><a href="table.php"><i class="menu-icon icon-table"></i>Tables </a></li>
-                                <li><a href="charts.php"><i class="menu-icon icon-bar-chart"></i>Charts </a></li>
-                            </ul>
-                            -->
-                            <!--/.widget-nav-->
-                            <ul class="widget widget-menu unstyled">
-                                <li><a class="collapsed" data-toggle="collapse" href="#togglePages"><i class="menu-icon icon-cog">
-                                </i><i class="icon-chevron-down pull-right"></i><i class="icon-chevron-up pull-right">
-                                </i>More Pages </a>
-                                    <ul id="togglePages" class="collapse unstyled">
-                                        <li><a href="other-login.php"><i class="icon-inbox"></i>Login </a></li>
-                                        <li><a href="other-user-profile.php"><i class="icon-inbox"></i>Profile </a></li>
-                                        <li><a href="other-user-listing.php"><i class="icon-inbox"></i>All Users </a></li>
-                                    </ul>
-                                </li>
-                                <li><a href="#"><i class="menu-icon icon-signout"></i>Logout </a></li>
-                            </ul>
-                        </div>
-                        <!--/.sidebar-->
-                    </div>
-                    <!--/.span3-->
-                    <div class="span9">
-					<div class="content">
-                    <div class="module">
-                                <div class="module-head">
-                                    <h3>
-                                        <?php echo $res['nm_event']; ?> - Generate Bracket</h3>
-                                </div>
-                    </div>
-                    <div class="module">
-                                <div class="module-head">
-                                    <h3>
-                                        Bracket</h3>
-                                </div>
-                                <div class="module-body" id="demoo">
+    <meta charset="utf-8">
+    <meta name="robots" content="noindex, nofollow">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="A layout example that shows off a blog page with a list of posts.">
+    <title>Pure Admin Panel</title>
 
-                                <p>0</p>
+    <link rel="stylesheet" href="assets/css/pure-min.css">
+    <link rel="stylesheet" href="assets/css/pure-responsive-min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link href="bracket/jquery.bracket.min.css" rel="stylesheet"/>
+    
+</head>
+<body>
+<?php include 'header.php' ?>
 
-                                </div>
+        <div class="content pure-u-1 pure-u-md-21-24">
+            <div class="header-small">
+
+                <div class="items">
+                    <h1 class="subhead">Bracket - <?php echo $res['nm_event']; ?></h1>
+                    <div class="demo">
+
                     </div>
-                <div class="module">
-                    <div class="module-head">
-                        <h3>
-                            Generate Bracket</h3>
-                        </div>
-                        <div class="module-body">
-                        <div class="module-option clearfix">
-                                    <div class="pull-right">
-                                        <a href="#" class="btn btn-primary" id="generate" >Generate Bracket</a>
-                                    </div>
-                                </div>
-                        <div class="row-fluid">
-                        <table class="table table-bordered">
+                    <div class="navigation">
+                    
+                    <a id="saveOutput" class="btn span4 btn-primary" onclick="function()">POST</a>
+                    
+                </div>
+
+                </div>
+
+
+                <div class="items">
+                    <h1 class="subhead">Participant List </h1>
+                    <table class="pure-table pure-table-bordered">
                         <thead>
-							<tr>
-							<th>#</th>
-							<th>Nama Tim</th>
-							<th>Nama Pendaftar</th>
-							<th>Username</th>
-							</tr>
-						</thead>
+                        <tr>
+                            <th>#</th>
+                            <th>Nama Tim</th>
+                            <th>Nama Pendaftar</th>
+                            <th>Username</th>
+                        </tr>
+                        </thead>
                         <?php
                             $sql     = "SELECT event.idEvent, event.nm_event, daftarevent.status, daftarevent.id_user, panitia.nama, panitia.nick, daftarevent.tim
 
@@ -140,57 +86,87 @@
                             WHERE event.idEvent = $id AND daftarevent.status= '1'";
                             $que     = mysqli_query($konak,$sql);
                             $r=0;
+                            $json_arr=array();
+                            $nm=$res['idEvent'];
+                            $fo=fopen("filejson/json$nm.json","w");//create direktori json sesuai dengan idevent
                             while ($res=mysqli_fetch_array($que)){
                             $r++;
-                    ?>
-                                <!--/.row-fluid-->
-								  <tbody>
-									<tr>
-									  <td><?php echo $r; ?></td>
-									  <td><?php echo $res['tim']; ?></td>
-									  <td><?php echo $res['nama']; ?></td>
-									  <td><?php echo $res['nick']; ?></td>
-									</tr>
-                                  </tbody>								
-                            <?php
+                            $row_arr = $res['tim'];
+                            array_push($json_arr,$row_arr);
+                        ?>
+
+                        <tbody>
+                        <tr>
+                        <td>
+                            <?php echo $r; ?></td>
+							<td><?php echo $res['tim']; ?></td>
+						    <td><?php echo $res['nama']; ?></td>
+                            <td><?php echo $res['nick']; ?></td>
+                        </tr>
+                        </tbody>
+                        <?php
                             }
-                            ?>
-                            </table>
-                                <!--/.row-fluid-->
-                            
-                        </div>
+                            $json=json_encode($json_arr);
+                            $fr=fwrite($fo,$json);  
+                                
+                        ?>
+                    </table>
+                </div>
+
+                <div class="navigation">
+                    
+                    <a id="btn" class="btn span4 btn-primary" onclick="function()">GENERATE</a>
+                    
+                </div>
+
+                <div class="footer">
+                    <div class="pure-menu pure-menu-horizontal">
+                        <ul>
+                            <li class="pure-menu-item"><a href="http://purecss.io/" class="pure-menu-link">PURE CSS</a></li>
+                            <li class="pure-menu-item"><a href="http://fikiruretgeci.com" class="pure-menu-link">FIKIR URETGECI</a></li>
+                            <li class="pure-menu-item"><a href="http://pure-themes.com" class="pure-menu-link">PURE THEMES</a></li>
+                        </ul>
                     </div>
-                    <div class="module-option clearfix">
-                                    <div class="pull-right">
-                                        <a href="#" class="btn btn-primary">SAVE</a>
-                                    </div>
-                                </div>
-                    </div>
-						
-					</div><!--/.content-->
-				</div>
-                    <!--/.span9-->
                 </div>
             </div>
-            <!--/.container-->
         </div>
-        <!--/.wrapper-->
-        <div class="footer">
-            <div class="container">
-                <b class="copyright">&copy; Raot </b>All rights reserved.
-            </div>
-        </div>
-        
-        <!-- ////////////////////////////////////////////////////////////////// -->
+    </div>
+ <!-- ////////////////////////////////////////////////////////////////// -->
         
         <script src="../bracket/jquery.min.js"></script>
         <script src="../bracket/jquery.bracket.min.js"></script>
         <script>
-                    /* Custom data objects passed as teams */
+                    function shuffle(array) {
+                            var currentIndex = array.length, temporaryValue, randomIndex;
+                          
+                            // While there remain elements to shuffle...
+                            while (0 !== currentIndex) {
+                          
+                              // Pick a remaining element...
+                              randomIndex = Math.floor(Math.random() * currentIndex);
+                              currentIndex -= 1;
+                          
+                              // And swap it with the current element.
+                              temporaryValue = array[currentIndex];
+                              array[currentIndex] = array[randomIndex];
+                              array[randomIndex] = temporaryValue;
+                            }
+                          
+                            return array;
+                          }
+                          
+                          var nm=<?php echo($id);?>; //ambil idevent
+                          var posisi ="filejson/json"+nm+".json"; //posisifilejson
+                          var arr = JSON.parse($.getJSON({'url': posisi, 'async': false}).responseText);
+                          //var arr = [ 'Team 1', 'Team 2', 'Team 3','Team 4','Team 5','Team 6','Team 7','Team 8'];
+                          arr = shuffle(arr);
+                        
                     var customData = {
                         teams : [
-                        [{name: "Team 1"}, {name: "Team2"}],
-                        [{name: "Team 3"}, {name: "Team 4"}]
+                        [{name: arr[0]}, {name: arr[1]}],
+                        [{name: arr[2]}, {name: arr[3]}],
+                        [{name: arr[4]}, {name: arr[5]}],
+                        [{name: arr[6]}, {name: arr[7]}]
                         ],
                         results : []
                     }
@@ -223,51 +199,47 @@
                     */
                     function render_fn(container, data, score, state) {
                     switch(state) {
-                    case "empty-bye":
-                    container.append("No team")
-                    return;
-                    case "empty-tbd":
-                    container.append("Upcoming")
-                    return;
-                     
-                    case "entry-no-score":
-                    case "entry-default-win":
-                    case "entry-complete":
-                    container.append(data.name)
-                    return;
+                        case "empty-bye":
+                            container.append("No team")
+                        return;
+                        case "empty-tbd":
+                            container.append("Upcoming")
+                        return;
+                        
+                        case "entry-no-score":
+                        case "entry-default-win":
+                        case "entry-complete":
+                            container.append(data.name)
+                        return;
+                        }
                     }
+
+                    function saveFn(data, userData) {
+                    var json = jQuery.toJSON(data)
+                    $('#saveOutput').text('POST '+userData+' '+json)
+                    /* You probably want to do something like this
+                    jQuery.ajax("rest/"+userData, {contentType: 'application/json',
+                                                    dataType: 'json',
+                                                    type: 'post',
+                                                    data: json})
+                    */
                     }
                         
-                    $(function() {
-                    $('#demo').bracket({ //tambahclickfuntion u/ trigger generator
+                    document.getElementById ("btn").addEventListener("click", function() {
+                    $('.demo').bracket({ //tambahclickfuntion u/ trigger generator
                         init: customData,
                         disableToolbar: true,
                         disableTeamEdit: true,
-                        save: function(){}, 
+                        save: saveFn,
+                        userData: "/filejson/json13", 
                         decorator: {edit: edit_fn,
                                     render: render_fn}})
+                        var data = container.bracket('data')
+                        $('#dataOutput').text(jQuery.toJSON(data))
                     })
-        </script>        
-
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js">
-        $(document).ready(function(){
-            $("#generate").click(function(){
-                $(".demoo").load("bracket1.txt");
-            });
-        });
-        </script>
-        
-                            
-        <script src="scripts/jquery-1.9.1.min.js" type="text/javascript"></script>
-        <script src="scripts/jquery-ui-1.10.1.custom.min.js" type="text/javascript"></script>
-        <script src="bootstrap/js/bootstrap.min.js" type="text/javascript"></script>
-        <script src="scripts/flot/jquery.flot.js" type="text/javascript"></script>
-        <script src="scripts/flot/jquery.flot.resize.js" type="text/javascript"></script>
-        <script src="scripts/datatables/jquery.dataTables.js" type="text/javascript"></script>
-        <script src="scripts/common.js" type="text/javascript"></script>
-
-      
-    </body>
-	<?php
+        </script> 
+</body>
+<?php
     }
-?>			
+?>
+</html>

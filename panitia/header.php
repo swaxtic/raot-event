@@ -10,18 +10,6 @@
                         <li class="pure-menu-selected">
                             <a href="dashboard.html" class="pure-menu-link">Dashboard</a>
                         </li>
-                        <li>
-                            <a href="post-list.html" class="pure-menu-link">Posts List</a>
-                        </li>
-                        <li>
-                            <a href="post-form.html" class="pure-menu-link">Post Form</a>
-                        </li>
-                        <li class="menu-item-divided">
-                            <a href="option-list.html" class="pure-menu-link">Option List</a>
-                        </li>
-                        <li>
-                            <a href="option-form.html" class="pure-menu-link">Option Form</a>
-                        </li>
                         <li class="menu-item-divided">
                             <a href="profile.html" class="pure-menu-link">Profile</a>
                         </li>
