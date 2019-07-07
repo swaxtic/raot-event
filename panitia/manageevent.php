@@ -1,13 +1,31 @@
-﻿<!doctype html>
+<!DOCTYPE html>
 <?php
     session_start();
     include 'config.php';
-
+    $id =$_GET['detail'];
+    $sql     ="select * from event where idEvent='$id'";
+    $que     = mysqli_query($konak,$sql);
+    $res     = mysqli_fetch_array($que);
+    $tes     = $res['uplink'];
     if(!isset($_SESSION['status'])){
         header("location:../login.php");
+    }else if($_SESSION['id_panitia']!=$tes){
+        echo "Can't Do That, We will redirect you back"; ?> <span id="counter">3</span> second(s).</p>
+        <script type="text/javascript">
+            function countdown() {
+                var i = document.getElementById('counter');
+                if (parseInt(i.innerHTML)<=0) {
+                    location.href = 'index.php';
+                }
+                i.innerHTML = parseInt(i.innerHTML)-1;
+            }
+            setInterval(function(){ countdown(); },1000);
+        </script>
+    <?php 
     }else{
         
 ?>
+
 <html lang="en">
 <head>
     <meta charset="utf-8">
@@ -33,43 +51,31 @@
                     <h1 class="subhead">My Tournament - <?php echo $_SESSION['nick']; ?></h1>
                 </div>
             </div>
+            
 
                 <div class="pure-g">
 
-                    <div class="pure-u-1 pure-u-lg-1-2">
-                        <div class="column-block"><br>
-                        <a href="addevents.php" class="btn btn-lg span4 btn-primary">
+                    <div class="pure-u-1 pure-u-lg-1-1">
+                        <div class="column-block"><br> 
+                        <a href="addparticipant.php?detail=<?php echo $res['idEvent']; ?>" class="btn btn-lg span4 btn-primary">
                             <i class="fa fa-plus fa-5x"></i><br/>
-                            Add Tournament
+                            Add Participant
+                        </a>                      
+                        <a href="editevent.php?detail=<?php echo $res['idEvent']; ?>" class="btn btn-lg span4 btn-primary">
+                            <i class="fa fa-plus fa-5x"></i><br/>
+                            Edit Your Tournament
+                        </a>                        
+                        <a href="addevents.php?detail=<?php echo $res['idEvent']; ?>" class="btn btn-lg span4 btn-primary">
+                            <i class="fa fa-plus fa-5x"></i><br/>
+                            Generate Bracket
                         </a>
-                        <div class="review-md1">
-                        <?php
-										$id = $_SESSION['id_panitia'];
-										if(isset($_SESSION['id_panitia'])){
-		       							$sql	="select * from event where uplink='$id'";
-				    					$que 	= mysqli_query($konak,$sql);				    
-				    					while($res=mysqli_fetch_array($que)){
-										?>
-                                       <div class="col-md-4 sed-md"><br>
-				 	    <div class="col-1">
-						 <a href="event.php?detail=<?php echo $res['idEvent']; ?>"></a>
-						 <h4><a href="manageevent.php?detail=<?php echo $res['idEvent']; ?>"><?php echo $res['nm_event']; ?></a></h4>
-                         <p><?php echo substr($res['deskripsi'],0,100); ?></p>
-                                    </a>
-                                <a class="btn btn-success" href="post-form.html">Edit</a>
-                                <a class="btn btn-danger" href="#" onclick="return confirm('Are you sure?');">Delete</a>
-                                </div>
-                            </div>
-                                    <?php
-				                    }
-		                            }
-                                    ?>
-                        <div class="clearfix"> </div>
-			
-			</div>
-						
+                        <a href="addparticipant.php?detail=<?php echo $res['idEvent']; ?>" class="btn btn-lg span4 btn-primary">
+                            <i class="fa fa-plus fa-5x"></i><br/>
+                            Delete Tournament
+                        </a>    
                         </div>
                     </div>
+            
             </div>
 
             <!-- FOOTER START -->  
