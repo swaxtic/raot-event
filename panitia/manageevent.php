@@ -62,15 +62,15 @@
                             Add Participant
                         </a>                      
                         <a href="editevent.php?detail=<?php echo $res['idEvent']; ?>" class="btn btn-lg span4 btn-primary">
-                            <i class="fa fa-plus fa-5x"></i><br/>
+                            <i class="fa fa-pencil-square-o fa-5x"></i><br/>
                             Edit Your Tournament
                         </a>                        
-                        <a href="addevents.php?detail=<?php echo $res['idEvent']; ?>" class="btn btn-lg span4 btn-primary">
-                            <i class="fa fa-plus fa-5x"></i><br/>
+                        <a href="bracket.php?detail=<?php echo $res['idEvent']; ?>" class="btn btn-lg span4 btn-primary">
+                            <i class="fa fa-cogs fa-5x"></i><br/>
                             Generate Bracket
                         </a>
                         <a href="addparticipant.php?detail=<?php echo $res['idEvent']; ?>" class="btn btn-lg span4 btn-primary">
-                            <i class="fa fa-plus fa-5x"></i><br/>
+                            <i class="fa fa-times fa-5x"></i><br/>
                             Delete Tournament
                         </a>    
                         </div>
@@ -83,9 +83,8 @@
                 <div class="footer">
                     <div class="pure-menu pure-menu-horizontal">
                         <ul>
-                            <li class="pure-menu-item"><a href="http://purecss.io/" class="pure-menu-link">PURE CSS</a></li>
-                            <li class="pure-menu-item"><a href="http://fikiruretgeci.com" class="pure-menu-link">FIKIR URETGECI</a></li>
-                            <li class="pure-menu-item"><a href="http://pure-themes.com" class="pure-menu-link">PURE THEMES</a></li>
+                            <li class="pure-menu-item"><a href="#" class="pure-menu-link">RAOT EVENT ORGANIZER</a></li>
+                            
                         </ul>
                     </div>
                 </div>

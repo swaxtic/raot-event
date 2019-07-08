@@ -19,7 +19,15 @@ ul {
     padding: 0;
 }
 h3 {
-    font-weight: 100;
+    
+@font-face{
+	font-family: 'Play-Bold';
+	src:url(../fonts/Play-Bold.ttf);
+	}
+	@font-face{
+	font-family: 'Play-Regular';
+	src:url(../fonts/Play-Regular.ttf);
+	}
 }
 table {
     width: 100%;
@@ -36,14 +44,16 @@ pre {
     color: #aaa;
     border-bottom: 1px solid #eee;
     padding: 0.4em 0;
-    font-size: 80%;
-    font-weight: 500;
-    letter-spacing: 0.1em;
+	font-family: 'Play-Bold';
+	src: url(../fonts/Play-Bold.ttf) format('truetype');
+     letter-spacing: 0.1em;
 }
 .pure-message {
     padding: .2em 1em;
     margin-bottom: .2em;
-    font-size: 85%;
+    
+font-family: 'Play-Bold';
+src: url(../fonts/Play-Bold.ttf) format('truetype');
 }
 /*Main Page*/
 .header-large h1,
@@ -54,7 +64,9 @@ pre {
     text-transform: uppercase;
 }
 .header-large h2 {
-    font-weight: 100;
+    
+font-family: 'Play-Bold';
+src: url(../fonts/Play-Bold.ttf) format('truetype');
     color: rgb(176, 202, 219);
 }
 
@@ -75,7 +87,9 @@ pre {
     margin-top: 1em;
     letter-spacing: 0.05em;
     text-transform: uppercase;
-    font-size: 85%;
+    
+font-family: 'Play-Bold';
+src: url(../fonts/Play-Bold.ttf) format('truetype');
 }
 .nav ul li a:hover,
 .nav ul li a:focus,
@@ -148,7 +162,9 @@ pre {
   .btn-sq {
 	width: 100px !important;
 	height: 100px !important;
-	font-size: 10px;
+	
+font-family: 'Play-Bold';
+src: url(../fonts/Play-Bold.ttf) format('truetype');
   }
   
   .btn-sq-sm {
