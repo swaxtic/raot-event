@@ -33,7 +33,7 @@
     <meta name="robots" content="noindex, nofollow">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="A layout example that shows off a blog page with a list of posts.">
-    <title>Pure Admin Panel</title>
+    <title>RAOT EVENT ORGANIZER</title>
 
     <link rel="stylesheet" href="assets/css/pure-min.css">
     <link rel="stylesheet" href="assets/css/pure-responsive-min.css">
@@ -122,9 +122,8 @@
                 <div class="footer">
                     <div class="pure-menu pure-menu-horizontal">
                         <ul>
-                            <li class="pure-menu-item"><a href="http://purecss.io/" class="pure-menu-link">PURE CSS</a></li>
-                            <li class="pure-menu-item"><a href="http://fikiruretgeci.com" class="pure-menu-link">FIKIR URETGECI</a></li>
-                            <li class="pure-menu-item"><a href="http://pure-themes.com" class="pure-menu-link">PURE THEMES</a></li>
+                            
+                            <li class="pure-menu-item"><a href="#" class="pure-menu-link">RAOT EVENT ORGANIZER</a></li>
                         </ul>
                     </div>
                 </div>

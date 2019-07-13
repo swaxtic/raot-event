@@ -30,16 +30,19 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 				<form action="loginin.php" method="post">
 					<input type="text" name="email" placeholder="Email..." required=""/>
 					<input type="password"  name="password" class="padding" placeholder="Password" required=""/>
+					<br><br><br>
 					<input type="submit" name="submit" value="LOGIN">
 					<br>
 					<a href="lupa_password.php"> Lupa Password ?</a>
 					<div style="text-align: center;">
 						<br> <a href="register.php"> Tidak Mempunyai Akun RAOT? Daftar Sekarang  </a> <br>
 					</div>
+					
 				</form>
 			</div>
 		  <div class="clear"> </div>
 		</div>
+	
 		
 		<div class="footer">
 		<p>© 2019 RAOT-HUB Login. All Rights Reserved</p>

@@ -56,7 +56,7 @@
 						 <h4><a href="manageevent.php?detail=<?php echo $res['idEvent']; ?>"><?php echo $res['nm_event']; ?></a></h4>
                          <p><?php echo substr($res['deskripsi'],0,100); ?></p>
                                     </a>
-                                <a class="btn btn-success" href="post-form.html">Edit</a>
+                                <a class="btn btn-success" href="editevent.php">Edit</a>
                                 <a class="btn btn-danger" href="#" onclick="return confirm('Are you sure?');">Delete</a>
                                 </div>
                             </div>
@@ -77,9 +77,8 @@
                 <div class="footer">
                     <div class="pure-menu pure-menu-horizontal">
                         <ul>
-                            <li class="pure-menu-item"><a href="http://purecss.io/" class="pure-menu-link">PURE CSS</a></li>
-                            <li class="pure-menu-item"><a href="http://fikiruretgeci.com" class="pure-menu-link">FIKIR URETGECI</a></li>
-                            <li class="pure-menu-item"><a href="http://pure-themes.com" class="pure-menu-link">PURE THEMES</a></li>
+                            <li class="pure-menu-item"><a href="#" class="pure-menu-link">RAOT EVENT ORGANIZER</a></li>
+
                         </ul>
                     </div>
                 </div>

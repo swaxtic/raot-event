@@ -8,10 +8,10 @@
                     </p>
                     <ul class="pure-menu-list">
                         <li class="pure-menu-selected">
-                            <a href="dashboard.html" class="pure-menu-link">Dashboard</a>
+                            <a href="index.php" class="pure-menu-link">Dashboard</a>
                         </li>
                         <li class="menu-item-divided">
-                            <a href="profile.html" class="pure-menu-link">Profile</a>
+                            <a href="#" class="pure-menu-link">Profile</a>
                         </li>
                     </ul>
                 </div>
