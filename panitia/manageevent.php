@@ -66,11 +66,7 @@
                             Edit Your Tournament
                         </a>                        
                         <a href="bracket.php?detail=<?php echo $res['idEvent']; ?>" class="btn btn-lg span4 btn-primary">
-<<<<<<< HEAD
                             <i class="fa fa-plus fa-5x"></i><br/>
-=======
-                            <i class="fa fa-cogs fa-5x"></i><br/>
->>>>>>> e6cdef8ec57d0373edaf0f1085186b45c1ec49d2
                             Generate Bracket
                         </a>
                         <a href="addparticipant.php?detail=<?php echo $res['idEvent']; ?>" class="btn btn-lg span4 btn-primary">
