@@ -62,6 +62,7 @@
                             Add Participant
                         </a>                      
                         <a href="editevent.php?detail=<?php echo $res['idEvent']; ?>" class="btn btn-lg span4 btn-primary">
+                            <i class="fa fa-pencil-square-o fa-5x"></i><br/>
                             Edit Your Tournament
                         </a>                        
                         <a href="bracket.php?detail=<?php echo $res['idEvent']; ?>" class="btn btn-lg span4 btn-primary">
