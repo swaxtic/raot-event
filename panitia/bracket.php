@@ -40,6 +40,7 @@
     <link rel="stylesheet" href="assets/css/style.css">
     <link href="bracket/jquery.bracket.min.css" rel="stylesheet"/>
     
+    
 </head>
 <body>
 <?php include 'header.php' ?>
@@ -52,9 +53,10 @@
                     <div class="demo">
 
                     </div>
+                    
                     <div class="navigation">
                     
-                    <a id="saveOutput" class="btn span4 btn-primary" onclick="function()">POST</a>
+                    <a id="post" class="btn span4 btn-primary" onclick="function()">POST</a>
                     
                 </div>
 
@@ -62,6 +64,11 @@
 
 
                 <div class="items">
+                <div class="output">
+
+                    <pre id="output">Try to first modify some scores or teams</pre>
+
+                </div>
                     <h1 class="subhead">Participant List </h1>
                     <table class="pure-table pure-table-bordered">
                         <thead>
@@ -131,11 +138,11 @@
         </div>
     </div>
  <!-- ////////////////////////////////////////////////////////////////// -->
-        
         <script src="../bracket/jquery.min.js"></script>
         <script src="../bracket/jquery.bracket.min.js"></script>
         <script>
-                    function shuffle(array) {
+                    var databra;
+                    function shuffle(array) { ///FUNCTION RANDOM NUMBER
                             var currentIndex = array.length, temporaryValue, randomIndex;
                           
                             // While there remain elements to shuffle...
@@ -213,19 +220,42 @@
                         }
                     }
 
+                    
                     function saveFn(data, userData) {
                     var json = jQuery.toJSON(data)
-                    $('#saveOutput').text('POST '+userData+' '+json)
-                    /* You probably want to do something like this
+                    $('.output').text('POST '+userData+' '+json)
                     jQuery.ajax("rest/"+userData, {contentType: 'application/json',
                                                     dataType: 'json',
                                                     type: 'post',
                                                     data: json})
-                    */
                     }
+                    
+                    document.getElementById ("post").addEventListener("click", function() {
+                        //init: customData,
+                        //save: saveFn,
+                        //userData: "http://myapi"
+                        //var data = container.bracket('data')
+                         $('.output').text("save success")
+
+                    })
                         
-                    document.getElementById ("btn").addEventListener("click", function() {
-                    $('.demo').bracket({ //tambahclickfuntion u/ trigger generator
+                    document.getElementById ("btn").addEventListener("click", function() { //trigger bracket
+                    //$(function() {    
+                        var container = $('.demo')
+                        container.bracket({
+                        init: customData,
+                        disableToolbar: true,
+                        disableTeamEdit: true,
+                        save: saveFn,
+                        userData: "http://myapi",
+                        decorator: {edit: edit_fn,
+                                    render: render_fn}})
+                    
+                        /* current data */
+                        var databra = container.bracket('data')
+                        $('#dataOutput').text(jQuery.toJSON(data))
+                    })
+                    /* $('.demo').bracket({
                         init: customData,
                         disableToolbar: true,
                         disableTeamEdit: true,
@@ -233,9 +263,16 @@
                         userData: "/filejson/json13", 
                         decorator: {edit: edit_fn,
                                     render: render_fn}})
-                        var data = container.bracket('data')
-                        $('#dataOutput').text(jQuery.toJSON(data))
-                    })
+                        databra = container.bracket('data')
+                        $('#dataOutput').text(jQuery.toJSON(databra))
+                    }) */
+                    
+                    /* $("post").click(function(){
+                            var json = jQuery.toJSON(databra)
+                            $(".output").text('POST '+json)
+                        }) */
+
+                    
         </script> 
 </body>
 <?php
